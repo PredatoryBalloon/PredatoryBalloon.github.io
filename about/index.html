@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="icon" href="../favicon.png" type="image/png" >
+
+	<title>A aweseom Website</title>
+	<style>
+	@font-face 
+	{
+		font-family: 'Gaegu-Regular';
+		src: url(../Gaegu-Regular.woff);
+		font-family: "Gaegu-Regular", "Courier", monospace;
+	}
+	
+	@font-face 
+	{
+		font-family: 'EPSONRegular';
+		src: url(EPSONRegular.woff);
+		font-family: "EPSONRegular", "Courier", monospace;
+	}
+	body 
+	{
+		background-color:#000000;
+        color: #FFFFFF;
+        font-family: "Gaegu-Regular", "Courier", monospace;
+        margin:0;
+		padding:0;
+		height:100%;
+		overflow-x: hidden;
+    }
+	.bg1 
+	{
+		width:150%;
+		min-height:calc(100vh + 500px);
+		position:fixed;
+		top:0;
+		left:0;
+		background-image: url("bg1.png");
+		will-change: transform;
+		z-index:-1;
+    }
+	@keyframes backgroundScroll 
+	{
+        0% {transform: translate(-400px,-500px);}
+        100% {transform: translate(0px,0px);}
+    }
+	.main 
+	{
+		margin:32px;
+        width: 756px;
+        font-size: 30px;
+        line-height: 80%;
+    }
+	body
+	{
+	}
+	.hardshadow
+	{
+		box-shadow: 10px 10px grey;
+	}
+	.nameBack
+	{
+		background-color: grey;
+		border: 5px solid black;
+	}
+	.mainTable
+	{
+		border: 5px solid #c2fcc6;
+        box-shadow: 0px 0px 20px 5px #000000;
+		background-color: #c2fcc6;
+	}
+	.textTable
+	{
+		border: 5px solid transparent;
+        box-shadow: 0px 0px 20px 5px transparent;
+		background-color: transparent;
+		
+	}
+	.textTableTd
+	{
+		border: 3px solid transparent;
+		background-image: none;
+		color: black;
+	}
+	td
+	{
+        border: 3px solid #00094a;
+        background-image: url("sky.png");
+        padding: 8px;
+        text-align: justify;
+    }
+	th
+	{
+		text-align: center;
+		color: #d10000;
+		transition: 0.5s;
+	}
+	th:hover
+	{
+		transform:scale(1.125);
+		transition: 0.2s;
+	}
+	.imgbutton
+	{
+		border: 2px solid #c2fcc6;
+		margin: 10px;
+		box-shadow: 0px 0px 10px 2px #000000;
+		transition: 0.5s;
+	}
+	.imgbutton:hover
+	{
+		border: 2px solid transparent;
+		border-image: url('select2.gif') 2 repeat;
+		transition: 0.2s;
+		transform:scale(1.125);
+	}
+	div.footerText
+	{
+		border-top: 4px dashed black;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+		transform: translate(0px,-100px);
+	}
+	div.lesscrappyfont
+	{
+		font-family: "", "Verdana", monospace;
+	}
+	div.evenlesscrappyfont
+	{
+		font-size: 16px;
+	}
+	div.evenlessercrappyfont
+	{
+		font: bold 38px/1.2;
+		font-size: 8px;
+	}
+	div.evenlesserercrappyfont
+	{
+		font: bold 38px/1.2;
+		font-size: 12px;
+	}
+	div.evenlessererercrappyfont
+	{
+		line-height: 18px;
+		font-weight: bold;
+		font-size: 13px;
+	}
+	div.newBox
+	{
+		font-family: "", "Verdana", monospace;
+		width: 704px;
+		border: 2px solid white;
+		background-color: black;
+		line-height: 18px;
+		text-align: left;
+		padding: 20px;
+		font-weight: bold;
+		font-size: 13px;
+		transform: translate(0px,0px);
+	}
+	div.newBoxClr
+	{
+		text-color: #00DBDB;
+	}
+	div.newBoxClrNow
+	{
+		color: #00CECE;
+	}
+	div.newBoxOut
+	{
+		border: 4px solid black;
+	}
+	div.brekaa
+	{
+		position: absolute;
+		width: 756px;
+		height: 31px;
+		background-image: url("breka.png");
+		transform: translate(0px,-30px);
+	}
+	div.newbgtop
+	{
+		z-index: -1;
+		width:250%;
+		position: absolute;
+		height: 130px;
+		background-image: url("woahhawtop.png");
+		transform: translate(-670px,-30px);
+	}
+	div.newbg
+	{
+		z-index: -1;
+		width:250%;
+		position: absolute;
+		height: 1690px;
+		background-image: url("woahaw5.png");
+		transform: translate(-670px,100px);
+	}
+	div.newBox2
+	{
+		font-family: "", "Verdana", monospace;
+		width: 696px;
+		
+		border-top: 6px outset #3F0004;
+		border-right: 6px outset #84A009;
+		border-bottom: 6px outset #000000;
+		border-left: 6px outset #024F00;
+		
+		background-color: black;
+		color: #414F04;
+		line-height: 18px;
+		text-align: left;
+		padding: 20px;
+		font-weight: bold;
+		font-size: 13px;
+		
+	}
+	div.newBox2Out
+	{
+		border: 2px solid black;
+	}
+	div.newBox2Out2
+	{
+		border: 2px solid #3F0004;
+		transform: translate(0px,170px);
+	}
+	span.toothin
+	{
+		font-weight: normal;
+	}
+	span.epsonf
+	{
+		font-family: "EPSONRegular", "Courier", monospace;
+		font-size: 15px;
+		font-weight: normal;
+		
+	}
+	div.epsonft
+	{
+		text-align: center;
+		font-family: "EPSONRegular", "Courier", monospace;
+		font-size: 30px;
+		font-weight: normal;
+		
+	}
+	div.epsonrealzies
+	{
+		text-align: left;
+		font-family: "EPSONRegular", "Courier", monospace;
+		font-size: 15px;
+		font-weight: normal;
+		
+	}
+	@keyframes woards
+	{
+        0% {transform: translate(0px,140px) rotate(0deg);}
+        50% {transform: translate(0px,145px) rotate(.4deg);}
+		100% {transform:translate(0px,140px) rotate(0deg);}
+    }
+	.gobackc
+	{
+		transform: translate(0px,140px);
+		animation: woards 3s ease-in-out infinite;
+	}
+	@keyframes row 
+	{
+        0% {transform: translate(0px,0px) rotate(0deg);}
+        50% {transform: translate(7px,0px) rotate(.4deg);}
+		100% {transform: translate(0px,0px) rotate(0deg);}
+    }
+	.gobacka
+	{
+		animation: row 1.8s ease-in-out infinite;
+		
+	}
+	
+	
+	</style>
+</head>
+<body>
+<div class="bg1" style="animation: backgroundScroll 10s linear infinite; background-position: center;"></div>
+<center>
+	<div class="main">
+		<img align="middle" height="26px" src="bar.gif" width="756px"><br>
+		<img align="middle" src="abt.png" class="nameBack"><br>
+		<img align="middle" height="26px" src="bar.gif" width="756px"><br><br><br>
+		<table class="mainTable">
+			<tr>
+				<td>
+					<table class="textTable">
+						<tr>
+							<th>
+								<b>[ABOUT ME]</b>
+							</th>
+						</tr>
+						<tr>
+							<td class="textTableTd">
+								Uhh, I don't actually know what to put here. I've just like, reused assets from my crappy first website for this page
+								and now it looks equally as crappy. Like what was I even thinking with this font. Hold on lets see if I can change it mid way 
+								through this. <br><br>
+								<div class = "lesscrappyfont">
+								Is this better? Well okay it's more readable but it's still huge.
+								<div class = "evenlesscrappyfont">
+								What about this? Well I should have put a line break before this line but I think it looks a little better?<br><br>
+								I wish the font weight was a little bigger though. And maybe even have like, this font be smaller. Ugh. Why does Verdana as a font cost 40$ if you want the "Pro" version. This is ridiculous. Lets see what I can do though.<br>
+								<div class = "evenlessercrappyfont">
+								Okay well this is just way too small<br>
+								<div class = "evenlesserercrappyfont">
+								A little bigger?<br>
+								<div class = "evenlessererercrappyfont">
+								A little bigger and bolder? Okay I think this is good. Now I just need to do something about this awful decoration. Hmm. I 
+								wonder if I can change the style of the box mid way.<br>
+								</div>
+								</div>
+								</div>
+								</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table><br>
+		<div class="brekaa">
+		</div>
+		<div class="newBoxOut">
+		<div class="newBox">
+		&nbsp;There we go. Took a bit of css and image editing to get that transition but now its nice and sleek. No complex image textures or nothin. I mean, not that I don't like that stuff. I just don't have any ideas for that yet I guess. Well as long as we're changing things in like, a dynamically narrative fashion where I gradually change the scenery to match my current preferences, which actually ends up being a lot more effort in the long run than if I just started out with everything the way I wanted, I might as well change the background too so it actually fits with this new text box thing. Hmm. Maybe like, a picture of space? That might be too generic though. Now that I think about it, this text is kind of hard to read. The contrast between complete white and black is just too much. Wait instead of changing the background color again which is kind of difficult, I could just 
+		<div class="newBoxClr">
+		do this. Wait it didn't work. Hold on.
+		</div>
+		<div class="newBoxClrNow">
+		There we go. This is so much easier to read on this background. Hold on hold on I think I've got an even better color scheme dealy thingy. I'll have 
+		to change a lot, including the background, but I think it just might work...
+		</div>
+		</div>
+		</div>
+		<br><br><br><br>
+		<div class="newbgtop">
+		</div>
+		<div class="newbg">
+		</div>
+		<div class="footerText">
+		</div>
+		<div class="newBox2Out2">
+		<div class="newBox2Out">
+			<div class="newBox2">
+			&nbsp;&nbsp;&nbsp;How's this? Wow, okay. Maybe the text is a bit dark, but other than that I think this is okayish? Like the font is still meh but I don't know what to change it to. Like, this looks cool? but it seems a little dark and weird for an about me page don't you think? Nothing wrong with 
+			dark and weird styles of course, but I don't think this fits what I'm going for. Actually you know what, after writing a bit of text in this 
+			style, I don't think it's that bad. It kind of does fit in a way, assuming you can read this darkish text. I think the font is still a little too bold though. Like, I don't think I would mind Verdana (which is what this font is), but it just looks <span class="toothin">too thin without bold</span>. I need like, a semibold version. <span class="toothin"> You know what, maybe this isn't too bad. Wow, I just spent like 30 minutes trying to get 
+			this other font to work but for some reason it just decided not to work for whatever reason. Great. </span> <span class="epsonf">UHHgfgg. WAIT! THAT 
+			ACTUALLY WORKED. Okay so what I did was I put the .ttf font file in an online .ttf to .woff converter, and now the font file works! I hypothesized 
+			that by putting it through a converter, any weird data that might be causing it not to work would be ignored, so it would get fixed when it got converted. 
+			I guess I was right. Woohoo! Yeah wow this looks muuuuch better. Now to take a break. </span><br><br><br><br>
+			<div class="epsonft"><u>About Me. For the Totes Realzies this Time.</u></div><br><br>
+			<div class="epsonrealzies">
+			&nbsp;&nbsp;&nbsp;Instead of listing a variety of activities that I have participated in while  narratively intertwining the significant events that I have experienced over the past arbitrarily decided number of years, I'll do my best to give an explanation as to how I function as a person. That way, this really is about ME and not about the things AROUND me. Also, it means that it will be more unlikely that I'll have to rewrite this to conform to any emerging circumstances. Thankfully, I'm pretty simple, all things considered. Okay, not really I guess. To start, mostly, I like giving people, including myself, things that lead to changing their logical system of deduction of reality, if that makes sense. Like, I like giving stuff that, when it gets incorporated into the person's system of understanding reality simply due to it's nature self presentation, it forces the person to change or consider changing that very system of understanding. For example, if a person's system of understanding reality was structured so that they thought, or rather, would end up thinking if put in a particular circumstance, or maybe even would just naturally and automatically not think otherwise, that squares always have exactly 4 sides. I would love to give this person something that would force them to at least consider changing that, such as giving them an example of a square with 5 sides, or coming up with and showing them a logical system that allowed for squares to have any number of sides. I would probably start the conversation with them like, "Did know squares can actually have 5 sides?" with no prior context. I would probably do this, because one of the main ways you can change someone's system for comprehending reality is to show them something is possible. That doesn't mean that they would have to think it was impossible on like, a regular and active basis, but just that they may not even consider the possibility or lack of possibility of that something to exist in the first place without it being shown to them explicitly. In other words, one of the primary ways you can change someone's system for comprehending reality is by showing them a possibility that they have not even considered. Starting off a conversation with, "Did know squares can actually have 5 sides?" with no prior context is something that doesn't happen often, and thus, it would come unexpected, and the fact that it comes unexpected is a result of the fact that the person hearing the words had not even considered that those words would happen at that moment for any reason, thus forcing the person to consider changing their system of understanding reality to better categorize and incorporate this unexpected event so that it 'makes sense'.  <br><br>
+			&nbsp;&nbsp;&nbsp;This should explain why I am the type of person who likes to think a lot. Because I like to show myself new possibilities to change my own system for understanding reality, I like to constantly sit and think of possibilities and ideas that do just that. Of course, I don't just want to change that system just for the sake of changing it. I use this ability to recognize where changes could be made to better my life and happiness in whatever way I think is best. I can get into trouble though if I start to limit my own reality understanding changes for fear of changing other people's reality understanding system into something I don't think is best for them or me (basically putting other people before me to an unhealthy extent), but I try to work on that whenever possible. I'm still not perfect at balancing giving me what I would benefit from with giving others what I think they would benefit from, but I would say I have improved. It mostly comes down to having the courage to walk away from talking to or hanging out with people to have time to myself so I can do my thinking thing. <br><br>
+			&nbsp;&nbsp;&nbsp;Woohoo. And I explained all of that without using any personality categorization things like MBTI.
+			</div>
+			</div>
+		</div>
+		</div>
+		<br><br><br>
+		<a href="../main.html"><img class="gobackc" src="gobackeswords.png"></a>
+		<a href="../main.html"><img class="gobacka" src="gobackesarrow.png"></a>
+		
+	</div>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

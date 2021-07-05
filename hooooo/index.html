@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="icon" href="glagses.png" type="image/png" >
+
+	<title>A aweseom Website</title>
+	<style>
+	@font-face 
+	{
+		font-family: 'Gaegu-Regular';
+		src: url(../Gaegu-Regular.woff);
+		font-family: "Gaegu-Regular", "Courier", monospace;
+	}
+	
+	@font-face {
+		font-family:"courier-std";
+		src:url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/l?subset_id=2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/d?subset_id=2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/a?subset_id=2&fvd=n4&v=3") format("opentype");
+		font-display:auto;
+		font-style:normal;
+		font-weight:400;
+	}
+	
+	@font-face 
+	{
+		font-family: 'f25';
+		src: url(../FSEX300.ttf);
+		font-family: "fsex300", "Courier", monospace;
+	}
+	
+	body 
+	{
+		background-color:#000000;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+        color: #FFFFFF;
+        font-family: "f25", "Courier", monospace;
+        margin:0;
+		padding:0;
+		height:100%;
+    }
+	.bg2
+	{
+		width:100%;
+		min-height:calc(300vh);
+		position:fixed;
+		top:0;
+		left:0;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		background-color: #F900F9;
+		
+		background-position: center center;
+		transform:scale(2.8,2.8);
+		will-change:;
+		z-index:-1;
+	}
+	@keyframes backgroundScroll 
+	{
+        0% {transform: translate(-400px,-500px);}
+        100% {transform: translate(0px,0px);}
+    }
+	@keyframes cool 
+	{
+        0% {transform: translate(-400px,-500px); }
+        50% {transform: translate(0px,0px); }
+		100% {transform: translate(-400px,-500px); }
+    }
+	.main 
+	{
+		margin:32px;
+        width: 756px;
+        font-size: 32px;
+        line-height: 80%;
+    }
+	body
+	{
+	}
+	.hardshadow
+	{
+		box-shadow: 10px 10px grey;
+	}
+	.nameBack
+	{
+		background-color: grey;
+		border: 5px solid black;
+	}
+	.mainTable
+	{
+		border: 5px solid #F2F2F2;
+		background-color: black;
+	}
+	.textTable
+	{
+		border: 5px solid transparent;
+        box-shadow: 0px 0px 20px 5px transparent;
+		background-color: transparent;
+		
+	}
+	.textTableTd
+	{
+		font-family: "f25", "Courier", monospace;
+		font-weight: 0;
+		border: 3px solid transparent;
+		background-image: none;
+		color: white;
+		font-size: 16px;
+		line-height: 100%;
+		padding: 0px;
+	}
+	td
+	{
+        border: 3px solid #F2F2F2;
+        padding: 8px;
+        text-align: justify;
+		height:50px;
+    }
+	td.left
+	{
+		width:200px;
+		height:50px;
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 8px;
+		color: white;
+        text-align: center;
+    }
+	td.right
+	{
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 0px;
+		color: white;
+        text-align: justify;
+    }
+	th
+	{
+		transform:translate(0px,-2px);
+		padding: 0px;
+		font-weight: 100;
+		text-align: center;
+		color: #B0E7F2;
+		transition: 0.5s;
+		text-align: left;
+	}
+	th:hover
+	{
+		animation: huecycle .17s forwards linear;
+		transition: 0.2s;
+	}
+	.imgbutton
+	{
+		border: 2px solid #696969;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		margin: 10px;
+		box-shadow: 0px 0px 10px 2px #000000;
+		transition: 0.5s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2
+	{
+		transition: 0.5s;
+	}
+	
+	.imgbutton:hover
+	{
+		border: 2px solid transparent;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		border-image: url('gfx_noisew.gif') 8 repeat;
+		transition: 20s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2:hover
+	{	
+		transition: 0.2s;
+		transform:scale(1.125);
+	}
+	
+	div.boax
+	{
+		background-color: red;
+		width: 600px;
+		height: 400px;
+		padding: 30px;
+		color: yellow;
+		text-align: center;
+		
+	}
+	
+	div.bloo
+	{
+		position: absolute;
+		background-color: cyan;
+		width: 4px;
+		height: 6px;
+		transform: translate(362px,-264px)
+
+		
+	}
+	
+	.glas
+	{
+		height: 200px;
+		
+	}
+	.glasss
+	{
+	position: absolute;
+		height: 200px;
+		transform: translate(-400px,0px)
+	}
+	span.ovrer
+	{
+		font-family: 'Arial';
+		color: #3EB0F8;
+	}
+	span.smaller
+	{
+		font-size: 16px;
+	}
+	span.smallerer
+	{
+		font-size: 10px;
+	}
+	</style>
+</head>
+<body>
+<div class="bg2"></div>
+<center>
+	<div class="main">
+	<div class="boax">
+		Did you know broccoli can cure any disease? B)
+		<br><br><br>
+		<img class="glas" src="glagses.png"><img class="glasss" src="glagses.png">
+		<div class="bloo"></div>
+		Hahahaha<br>
+		<br>
+		<br>
+		What if lightning is ghosts being born????
+		<br>
+		<img class="glas" src="strawb.jpg">
+		<br>
+		<br>
+		Up is not a real direction. <span class="ovrer">???</span> It's true! <span class="ovrer">What are you even talking about? </span><br><span class="smaller">Uh, I don't know. <span class="ovrer">Pffflgf okay.</span> .....look, sometimes you need to question if up is even a reality concept. <span class="ovrer">Wha- *sigh* Why are you like this.</span> Uhhhhhh </span><span class="smallerer"><span class="ovrer">You're right why am I even asking.</span> Ahahahahaha. <span class="ovrer">*shakes head*</span> So what are you doing? <span class="ovrer">I'm</span></span>
+		<br><br><br><br>
+	</div>
+	<br>
+	<a href="../main.html"><== gop bacck</a>
+	</div>
+</center>
+</body>
+<script>
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+

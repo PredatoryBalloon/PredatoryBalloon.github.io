@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="icon" href="favicon.png" type="image/png" >
+<link rel="stylesheet" href="distguide.css"/>
+
+	<title>A aweseom Website</title>
+	<style>
+	
+	
+	</style>
+</head>
+<body>
+<div class="bg2"></div>
+<center>
+	<div class="main">
+		<div class="title">
+		A Guide To Most Distance Mechanics 
+		</div>
+		<div class="sectionl">
+			<div class="section2">
+				<div class="section3">
+				<u> </u>
+				</div>
+				<br><br><br>
+				> Camera Behavior/Manipulation
+				<br><br>
+				<div class="section4">
+				 The camera in this game has it's own behavior that dictates where it looks and how it moves around. There are two main things that dictate how the camera moves:<br><br>
+				 1. The camera will always move to point/look in the direction of the car's velocity.<br><br>
+				 2. The bottom of the camera will always move to face toward the direction of gravity.<br><br>
+
+				 You can see both of these in action even in normal levels; the camera will always face where you are moving, and the bottom of the camera will always be, well, at the bottom (where the gravity is pointing). Normally though, it isn't that big of a deal to know exactly how the camera works in normal levels. However, in levels where the camera is facing upwards a lot, say in hard levels like 'Reaga' or 'Luro' both by Backgrounds', it is important to know the two concepts that I listed above. This is because by knowing how the camera moves, you can gripfly the car in such a way that you won't get an awful camera position.<br><br>
+
+				 The reason why it's easier to get a bad camera position in levels that go upward a lot is because, with an upward velocity direction, it takes less a change in velocity to shift the camera to a different position.<br><br>
+				 See in the below diagram, the camera faces forward toward the right. <br><br>
+				<img style="height:450px; display: block; margin-left: auto; margin-right: auto;" src="camtemp.png"><br><br>
+				 This is the most common scenario, where the player is just driving on the road. Their velocity direction doesn't have much verticality, and  the camera can easily turn with any turns the player might do that would shift their velocity in a different direction. If this were a 3D diagram and the player was doing turns, you would see the camera and velocity vector rotate around the upways axis smoothly.<br><br>
+
+				 Now, if the player is going upward, with their velocity direction near vertical, the diagram would look like this:<br><br>
+				<img style="height:450px; display: block; margin-left: auto; margin-right: auto;" src="camdiag.png"><br><br>
+
+				 Here though, a small shift in the velocity direction leftways could end up rotating the camera a full 180°! Like so:<br><br>
+				<img style="height:450px; display: block; margin-left: auto; margin-right: auto;" src="camera.gif"><br><br>
+
+				 Here, the camera has to rotate here 180° around the upways axis when the velocity direction begins to point leftways in order to keep the bottom of the camera closest to the direction of gravity. When this happens, the camera is at its worst, rotating to places that you don't want at all. Especially if it goes back and forth and is constantly rotating 180° as a result of a change in the velocity direction like the one above. However, if you are aware of this, you can carefully choose your velocity to make sure this doesn't happen by constantly keeping your velocity pointing in one direction, not letting it cross over the upways axis. If you really need to turn your velocity direction around to the other side, you can do it slowly, rotating your velocity vector around the upways axis in 3D space so that the camera rotates with it at your own discretion.<br><br>
+				</div>
+				<div class="section5">
+				 <a href="index.html"><<</a> <a href="index2.html"><</a> 3 <a href="index4.html">></a> <a href="index5.html">>></a> <br>
+				<a href="index.html">1</a> <a href="index2.html">2</a> <a href="index3.html">3</a> <a href="index4.html">4</a> <a href="index5.html">5</a>
+				
+				<br><br>
+				<div class="section6">
+				• <a class="index" href="index.html">Camera Reset</a> • <a class="index" href="index2.html">First Person Benefits</a> • <a class="index" href="index3.html">Camera Behavior/Manipulation</a> • <a class="index" href="index4.html">Camera and Virus Spirits</a> • <a class="index" href="index5.html">Cinematic Letterbox</a> •
+				</div>
+				</div>
+			</div>
+			 <a class="tooindex" href="../index.html"><== Exit to Topics</a>
+			
+		</div>
+	</div>
+</center>
+</body>
+<script>
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
