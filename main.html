@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="icon" href="favicon.png" type="image/png" >
+
+	<title>A aweseom Website</title>
+	<style>
+	@font-face 
+	{
+		font-family: 'Gaegu-Regular';
+		src: url(Gaegu-Regular.woff);
+		font-family: "Gaegu-Regular", "Courier", monospace;
+	}
+	
+	@font-face 
+	{
+		font-family: 'fsex300';
+		src: url(FSEX300.ttf);
+		font-family: "fsex300", "Courier", monospace;
+	}
+	
+	body 
+	{
+		background-color:#000000;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+        color: #FFFFFF;
+        font-family: "fsex300", "Courier", monospace;
+        margin:0;
+		padding:0;
+		height:100%;
+    }
+	.bg1
+	{
+		width:100%;
+		min-height:calc(100vh);
+		position:fixed;
+		top:0;
+		left:0;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		background-image: url("bg1.png");
+		background-size:cover;
+		background-position: center center;
+		will-change:;
+		z-index:-1;
+	}
+	@keyframes backgroundScroll 
+	{
+        0% {transform: translate(-400px,-500px);}
+        100% {transform: translate(0px,0px);}
+    }
+	@keyframes cool 
+	{
+        0% {transform: translate(-400px,-500px); }
+        50% {transform: translate(0px,0px); }
+		100% {transform: translate(-400px,-500px); }
+    }
+	.main 
+	{
+		margin:32px;
+        width: 756px;
+        font-size: 32px;
+        line-height: 80%;
+		
+    }
+	.main2
+	{
+        width: 100vw;
+		max-width:100%;
+    }
+	body
+	{
+		overflow-x: hidden;
+	}
+	.hardshadow
+	{
+		box-shadow: 10px 10px grey;
+	}
+	.nameBack
+	{
+		background-color: grey;
+		border: 5px solid black;
+	}
+	.mainTable
+	{
+		border: 5px solid #c2fcc6;
+        box-shadow: 0px 0px 20px 5px #000000;
+		background-color: #c2fcc6;
+	}
+	.textTable
+	{
+		border: 5px solid transparent;
+        box-shadow: 0px 0px 20px 5px transparent;
+		background-color: transparent;
+		
+	}
+	.textTableTd
+	{
+		border: 3px solid transparent;
+		background-image: none;
+		color: black;
+	}
+	td
+	{
+        border: 3px solid #00094a;
+        background-image: url("sky.png");
+        padding: 8px;
+        text-align: justify;
+    }
+	th
+	{
+		text-align: center;
+		color: #d10000;
+		transition: 0.5s;
+	}
+	th:hover
+	{
+		transform:scale(1.125);
+		transition: 0.2s;
+	}
+	.imgbutton
+	{
+		border: 2px solid #696969;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		margin: 10px;
+		box-shadow: 0px 0px 10px 2px #000000;
+		transition: 0.5s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2
+	{
+		transition: 0.5s;
+	}
+	
+	
+	.imgbutton:hover
+	{
+		border: 2px solid transparent;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		border-image: url('gfx_noisew.gif') 8 repeat;
+		transition: 20s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2:hover
+	{	
+		transition: 0.2s;
+		transform:scale(1.125);
+	}
+	
+	.imgbutton3
+	{
+		width:150px;
+		height:120px;
+		transition: 0.5s;
+		transform:translate(40px,4px) scale(1);
+	}
+	
+	.imgbutton3:hover
+	{	
+		width:150px;
+		height:120px;
+		transition: 0.2s;
+		transform:translate(35px,0px) scale(1.125);
+	}
+	
+	.imgbutton4
+	{
+		
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		margin: 10px;
+		box-shadow: 0px 0px 10px 2px #000000;
+		transition: 0.5s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton4:hover
+	{
+		border: 2px solid transparent;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		border-image: url('vortoxo.gif') 8 repeat;
+		
+		transition: 20s;
+		transition-timing-function: linear;
+	}
+	
+	div.footerText
+	{
+		border-top: 4px dashed black;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+	}
+
+	div.title
+	{
+		font-size: 48px;
+		border-bottom: 4px solid #63CCC6;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		background-color: #7AF9F3;
+		color: black;
+		line-height: 90%;
+	}
+	@keyframes huecycle {
+        0% {filter: hue-rotate(0deg) saturate(200%);}
+            
+      
+        100% {filter: hue-rotate(360deg) saturate(200%);}
+            
+        
+    }
+	div.sectionl
+	{
+		position:absolute;
+		z-index:2;
+		width:150px;
+		height:150px;
+		border-bottom: 10px ridge #BFC4A1;
+		border-left: 10px ridge #BFC4A1;
+		border-top: 10px ridge #BFC4A1;
+		margin: 50px;
+		padding: 20px;
+		text-align: left;
+		background-color: #F2EF3E;
+		color: black;
+		line-height: 90%;
+	}
+	
+	div.section1r
+	{
+		width:150px;
+		height:150px;
+		border-bottom: 10px ridge #BFC4A1;
+		border-right: 10px ridge #BFC4A1;
+		border-top: 10px ridge #BFC4A1;
+		margin: 50px;
+		padding: 20px;
+		text-align: left;
+		background-color: #F2EF3E;
+		color: black;
+		line-height: 90%;
+		transform:rotate(-5deg) scale(1.2,1.2);
+	}
+	div.section2
+	{
+		z-index:3;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: left;
+		background-color: #FF00C7;
+		color: black;
+		line-height: 90%;
+		transform:translate(100px,0px);
+	}
+	div.section3
+	{
+	
+		z-index:3;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+		transform:translate(560px,-300px) rotate(-420deg) scale(2,1.2);
+	}
+	div.section3_5
+	{
+		position:absolute;
+		z-index:3;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		color: red;
+		line-height: 90%;
+		transform:translate(-200px,-200px) rotate(3deg) scale(1,1.2);
+	}
+	div.section4
+	{
+		z-index:3;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+		transform:translate(30px,150px) rotate(1deg) scale(2,2);
+	}
+	div.section5
+	{
+		z-index:3;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+		transform:translate(0px,300px) rotate(0deg) scale(5,5);
+	}
+	div.section6
+	{
+		position:absolute;
+		overflow: visible;
+		z-index:32;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+		transform:translate(0px,-150px) rotate(0deg) scale(.5,.5);
+	}
+	div.section7
+	{
+		position:absolute;
+		z-index:5;
+		width:100vw;
+		height:1200px;
+		text-align: center;
+		background-image: url("wwweb1.gif");
+		background-position: center;
+		color: black;
+		line-height: 90%;
+		transform:translate(0px,-10px) rotate(0deg) scale(1,1);
+	}
+	div.section8sb
+	{
+
+		position:absolute;
+		z-index:100;
+		width:640px;
+		height:250px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		background-image: url("sedctond.png");
+		color: white;
+		line-height: 90%;
+		transform:translate(-20px,357px) rotate(0deg) scale(1,1);
+	}
+	div.section8stt
+	{
+
+		position:absolute;
+		z-index:100;
+		width:300px;
+		height:250px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		
+		color: white;
+		line-height: 90%;
+		transform:translate(280px,-180px) rotate(0deg) scale(1,1);
+	}
+	div.section8st
+	{
+
+		position:absolute;
+		z-index:100;
+		width:290px;
+		height:250px;
+		margin: 50px;
+		padding: 20px;
+		text-align: justify;
+		font-size: 16px;
+		color: white;
+		line-height: 90%;
+		transform:translate(280px,-140px) rotate(0deg) scale(1,1);
+	}
+	div.section9sb
+	{
+
+		position:absolute;
+		z-index:100;
+		width:640px;
+		height:250px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		background-image: url("sedctond.png");
+		color: white;
+		line-height: 90%;
+		transform:translate(-20px,640px) rotate(0deg) scale(1,1);
+	}
+	div.pic1
+	{
+		position:absolute;
+		z-index:-1;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+		transform:translate(-250px,-200px) rotate(4deg) scale(1,1);
+	}
+	div.pic2
+	{
+		position:absolute;
+		z-index:-1;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+		transform:translate(350px,50px) rotate(-4deg) scale(.7,.4);
+	}
+	div.pic3
+	{
+		position:absolute;
+		z-index:30;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+		transform:translate(400px,-400px) rotate(-4deg) scale(.7,.4);
+	}
+	div.pic4
+	{
+		position:absolute;
+		z-index:30;
+		width:150px;
+		height:150px;
+		margin: 50px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+		transform:translate(200px,320px) rotate(-4deg) scale(.7,.4);
+	}
+	div.pic5
+	{
+		position:absolute;
+		z-index:30;
+		width:100vw;
+		height:300px;
+		text-align: center;
+		background-image: url("gooo3.gif");
+		transform:translate(0px,0px) scale(1.4,1.4);
+		background-position: center;
+	}
+	div.pic6
+	{
+		position:absolute;
+		z-index:31;
+		width:812px;
+		height:300px;
+		text-align: center;
+		transform:translate(-27px,175px) scale(1,1);
+		background-position: center;
+	}
+	div.pic7
+	{
+		position:absolute;
+		z-index:30;
+		width:812px;
+		height:300px;
+		text-align: center;
+		transform:translate(-27px,175px) scale(1,1);
+		background-position: center;
+	}
+	div.pic8
+	{
+		position:absolute;
+		z-index:-1;
+		width:743px;
+		height:337px;
+		background-image: url("bocs.png");
+		transform:translate(-50px,-44px) scale(1,1);
+	}
+	div.pic9
+	{
+		position:absolute;
+		z-index:-1;
+		width:743px;
+		height:337px;
+		background-image: url("bocs.png");
+		transform:translate(0px,665px) scale(1,1);
+	}
+	div.wip
+	{
+		position:absolute;
+		z-index:100;
+		font-size: 16px;
+		border: 4px double #84FFE0;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		background-color: #000000;
+		color: white;
+		line-height: 90%;
+		transform:translate(200px,1000px);
+	}
+	#pic2 
+	{
+		border: 2px solid #007272;
+		background-image: url("button_me4.png");
+		transition: 0.2s;
+	}
+	
+	#pic2:hover
+	{
+		background-image: url("vortoxo3.gif");
+		transition: 0.2s;
+	}
+	
+	#pic3 
+	{
+		border: 2px solid #6B80A8;
+		background-image: url("carar.png");
+		transition: 0.2s;
+	}
+	
+	#pic3:hover
+	{
+		background-image: url("vortoxo3.gif");
+		transition: 0.2s;
+	}
+	</style>
+</head>
+<body>
+<div class="bg1"></div>
+<center>
+	<div class="main">
+		<div class="title">
+		A Awesome Site 
+		</div>
+		
+		<div class="sectionl">
+		Who is the guy==> 
+		</div>
+		<div class="section1r">
+		<div class="imgbutton2">
+		<a href="hooooo/index.html"><img class="imgbutton" id="spinner" src="glasses.png"></a>
+		</div>
+		</div>
+		<div class="pic1">
+		<img src="omfg.jpg">
+		</div>
+		<div class="pic2">
+		<img src="bo.png">
+		</div>
+		<div  class="pic3">
+		<img style="animation: cool 4s linear infinite;" src="cool.png">
+		</div>
+		<div  class="pic4">
+		<img style="animation: cool 4s linear infinite;" src="cool.png">
+		</div>
+		<div class="section2">
+		It wont fit :/ 
+		</div>
+		<div class="section3">
+		AWWWWWW Yeah. 
+		</div>
+		<div style="animation: huecycle 1s linear infinite;" class="section3_5">
+		tottolly awsomp
+		</div>
+		<div class="section4">
+		this neefs to
+		</div>
+		<div class="section5">
+		<b>NOT SUCJ</b>
+		</div>
+		<div class="section6">
+		*succk
+		</div>
+		<div  class="pic6">
+		<img src="well.png">
+		</div>
+		<div  class="pic7">
+		<img style="animation: huecycle 4s linear infinite;" src="wellback.png">
+		</div>
+		
+		<div  class="pic9">
+		</div>
+		<div class="section8sb">
+		<div  class="pic8">
+		</div>
+		<div class="imgbutton3" style="z-index:100;">
+			<a href="about/index.html"><img class="imgbutton4" id="pic2" src="tranparentqaur.png"></a>
+		</div>
+		<div class="section8stt">
+			<u>About me?</u>
+		</div>
+			<div class="section8st">
+			&nbsp;This seems like a page that always has to exist, whether you want it to or not. I don't even know what I would write in it, since I have not written it yet from my perspective. Last time I made one of these, it was a page that just had a plush dinosaur say a random quote out of 101 possible quotes every time you reloaded the page and scrolled down. People didn't see the scroll bar 95% of the time though so it really didn't work out.
+			</div>
+		</div>
+		<div class="section9sb">
+		<div  class="pic8">
+		</div>
+		<div class="imgbutton3" style="z-index:100;">
+			<a href="distguide/index.html"><img class="imgbutton4" id="pic3" src="tranparentqaur.png"></a>
+			
+		</div>
+		<div class="section8stt">
+			<u>Distance Guide</u>
+		</div>
+			<div class="section8st">
+			&nbsp;Ah. This is what inspired me to make this website once and for all in the first place. I guess I could have put it on my old website, but
+			I wanted it to be on a site more dedicated to Predatory_Balloon stuff. I spent a lot of time writing this guide, so I hope someone reads it.
+			</div>
+		</div>
+		<div class="wip">
+		More pages may come with time...
+		</div>
+	</div>
+	
+</center>
+<div class="main2">
+<div class="pic5">
+		</div>
+<div class="section7">
+		</div>
+		
+</div>
+
+</body>
+
+<script>
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
