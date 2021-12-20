@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="icon" href="card.png" type="image/png" >
+
+	<title>A aweseom Website</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+	@font-face 
+	{
+		font-family: 'Gaegu-Regular';
+		src: url(Gaegu-Regular.woff);
+		font-family: "Gaegu-Regular", "Courier", monospace;
+	}
+	
+	@font-face {
+		font-family:"courier-std";
+		src:url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/l?subset_id=2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/d?subset_id=2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/a?subset_id=2&fvd=n4&v=3") format("opentype");
+		font-display:auto;
+		font-style:normal;
+		font-weight:400;
+	}
+	
+	@font-face 
+	{
+		font-family: 'f25';
+		src: url(../FSEX300.ttf);
+		font-family: "fsex300", "Courier", monospace;
+	}
+	
+	@font-face 
+	{
+		font-family: 'EPSONRegular';
+		src: url(EPSONRegular.woff);
+		font-family: "EPSONRegular", "Courier", monospace;
+	}
+	
+	@font-face 
+	{
+		font-family: 'EPSONRegular2';
+		src: url(EPSON-ea-Regular.woff);
+		font-family: "EPSONRegular2", "Courier", monospace;
+	}
+	
+	body 
+	{
+		background-color:#000000;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+        color: #FFFFFF;
+        font-family: "f25", "Courier", monospace;
+        margin:0;
+		padding:0;
+		height:100%;
+    }
+	.bg2
+	{
+		width:100%;
+		min-height:calc(300vh);
+		position:fixed;
+		top:0;
+		left:0;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		background-color: #7F7F7F;
+		
+		background-position: center center;
+		transform:scale(2.8,2.8);
+		will-change:;
+		z-index:-1;
+	}
+	@keyframes backgroundScroll 
+	{
+        0% {transform: translate(-400px,-500px);}
+        100% {transform: translate(0px,0px);}
+    }
+	@keyframes cool 
+	{
+        0% {transform: translate(-400px,-500px); }
+        50% {transform: translate(0px,0px); }
+		100% {transform: translate(-400px,-500px); }
+    }
+	.main 
+	{
+		margin:32px;
+        width: 756px;
+        font-size: 32px;
+        line-height: 80%;
+    }
+	body
+	{
+	}
+	.hardshadow
+	{
+		box-shadow: 10px 10px grey;
+	}
+	.nameBack
+	{
+		background-color: grey;
+		border: 5px solid black;
+	}
+	.mainTable
+	{
+		border: 5px solid #F2F2F2;
+		background-color: black;
+	}
+	.textTable
+	{
+		border: 5px solid transparent;
+        box-shadow: 0px 0px 20px 5px transparent;
+		background-color: transparent;
+		
+	}
+	.textTableTd
+	{
+		font-family: "f25", "Courier", monospace;
+		font-weight: 0;
+		border: 3px solid transparent;
+		background-image: none;
+		color: white;
+		font-size: 16px;
+		line-height: 100%;
+		padding: 0px;
+	}
+	td
+	{
+        border: 3px solid #F2F2F2;
+        padding: 8px;
+        text-align: justify;
+		height:50px;
+    }
+	td.left
+	{
+		width:200px;
+		height:50px;
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 8px;
+		color: white;
+        text-align: center;
+    }
+	td.right
+	{
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 0px;
+		color: white;
+        text-align: justify;
+    }
+	th
+	{
+		transform:translate(0px,-2px);
+		padding: 0px;
+		font-weight: 100;
+		text-align: center;
+		color: #B0E7F2;
+		transition: 0.5s;
+		text-align: left;
+	}
+	th:hover
+	{
+		animation: huecycle .17s forwards linear;
+		transition: 0.2s;
+	}
+	.imgbutton
+	{
+		border: 2px solid #696969;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		margin: 10px;
+		box-shadow: 0px 0px 10px 2px #000000;
+		transition: 0.5s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2
+	{
+		transition: 0.5s;
+	}
+	
+	.imgbutton:hover
+	{
+		border: 2px solid transparent;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		border-image: url('gfx_noisew.gif') 8 repeat;
+		transition: 20s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2:hover
+	{	
+		transition: 0.2s;
+		transform:scale(1.125);
+	}
+	
+	div.footerText
+	{
+		border-top: 4px dashed black;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+	}
+
+	div.title
+	{
+		font-size: 48px;
+		animation: shadowRotate .25s ease-in-out infinite;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		
+		color: white;
+		line-height: 90%;
+		text-shadow: 
+	}
+	div.titleword
+	{
+		font-size: 80px;
+		
+		
+		text-align: center;
+		
+		color: white;
+		line-height: 90%;
+	}
+	div.subtitle
+	{
+		font-size: 16px;
+		margin: 17px;
+		
+		text-align: center;
+		
+		color: white;
+		line-height: 90%;
+	}
+	@keyframes shadowRotate 
+	{
+        0% {text-shadow: 2px 2px 4px #000000, 0 0 25px #ffa32b;}
+            
+      
+        50% {text-shadow: 2px 2px 4px #000000, 0 0 15px #ffa32b;}
+            
+        100% {text-shadow: 2px 2px 4px #000000, 0 0 25px #ffa32b;}
+    }
+	@keyframes huecycle {
+        0% {filter: hue-rotate(0deg) saturate(200%);}
+            
+      
+        100% {filter: hue-rotate(45deg) saturate(200%);}
+            
+        
+    }
+	div.sectionl
+	{
+		position:relative;
+		z-index:2;
+		width:900px;
+		font-family: 'EPSONRegular';
+		margin: 40px;
+		padding: 20px;
+		text-align: left;
+		background-color: #565656;
+		color: black;
+		line-height: 90%;
+		transform:translate(-133px,0px)
+	}
+	div.section2
+	{
+		position:relative;
+		z-index:3;
+		width:700px;
+		
+		margin: 0px;
+		padding: 20px;
+		text-align: left;
+		background-color: #C4C4C4;
+		color: black;
+		line-height: 90%;
+		transform:translate(81px,-10px)
+	}
+	div.section3
+	{
+		
+	}
+	a
+	{
+		color: #564CF5;
+	}
+	div.jollon
+	{
+		overflow: hidden;
+		width: 100px;
+		height: 1000px;
+		background-image: url("JELLOOOOOOOOOOOOOOOOOOOOOOOOO.png");
+		background-position: bottom;
+	}
+	p.jollonum
+	{
+		font-family: 'EPSONRegular';
+		width: 100px;
+		color: #00FF00;
+		transform: translate(0px,-50px);
+		line-height: 100px;
+		text-align: center;
+		text-shadow: 0px 0px 5px black,0px 0px 5px black,0px 0px 5px black,0px 0px 5px black,0px 0px 5px black,0px 0px 5px black;
+	}
+	
+	#gobutt
+	{
+		background-image: url('goreen.png');
+	}
+	
+	#gobutt:hover
+	{
+		background-image: url('gorange.png');
+	}
+	
+	@keyframes evdiagrow 
+	{
+		from 
+		{
+			transform: scale(1,1);
+		}
+		to 
+		{
+			transform: scale(1.1,1.1);
+		}
+	}
+	
+	@keyframes evdiastay
+	{
+		from 
+		{
+			transform: scale(1.1,1.1);
+		}
+		to 
+		{
+			transform: scale(1,1);
+		}
+	}
+	
+	@keyframes evdiapress
+	{
+		from 
+		{
+			transform: scale(1.1,1.1);
+		}
+		to 
+		{
+			transform: scale(.9,.9);
+		}
+	}
+	
+	@keyframes evdiapresstounpress
+	{
+		from 
+		{
+			transform: scale(.9,.9);
+		}
+		to 
+		{
+			transform: scale(1.1,1.1);
+		}
+	}
+	
+	@keyframes evdiapresstomoveout
+	{
+		from 
+		{
+			transform: scale(.9,.9);
+		}
+		to 
+		{
+			transform: scale(1,1);
+		}
+	}
+	
+	@keyframes firstLineExpanderNeutralContracted
+	{
+		from
+		{
+			transform: scale(0,1) translate(41px,0px);
+		}
+		to 
+		{
+			transform: scale(0,1) translate(41px,0px);
+		}
+	}
+	
+	@keyframes firstLineExpanderExpand
+	{
+		from
+		{
+			transform: scale(0,1) translate(41px,0px);
+		}
+		to 
+		{
+			transform: scale(1,1) translate(41px,0px);
+		}
+	}
+	
+	@keyframes firstLineExpanderContract
+	{
+		from
+		{
+			transform: scale(1,1) translate(41px,0px);
+		}
+		to 
+		{
+			transform: scale(0,1) translate(41px,0px);
+		}
+	}
+	#eventDesc::-webkit-scrollbar 
+	{
+		width: 10px;
+	}
+
+	#eventDesc::-webkit-scrollbar-track 
+	{
+		background: #f1f1f1; 
+		box-shadow: inset 0 0 5px grey;
+		border-radius: 5px;
+	}
+
+	#eventDesc::-webkit-scrollbar-thumb 
+	{
+		background: #03B9C6; 
+		border-radius: 5px;
+		box-shadow: inset 0 0 5px blue;
+	}
+
+	#eventDesc::-webkit-scrollbar-thumb:hover 
+	{
+		background: #3A8287; 
+	}
+
+	#evdia
+	{
+		
+	}
+	
+	#evdia:hover
+	{
+		
+	}
+	
+	</style>
+</head>
+<body>
+<div class="bg2"></div>
+<center>
+	<div class="main">
+		<div class="title">
+		Welcome to the
+		<div class="titleword">
+		LEXICHRONICLUSTER.
+		</div>
+		<div class="subtitle">
+		(Aka a chronic cluster of lexical things.)
+		</div>
+		</div>
+		<div class="sectionl">
+		8.46 pixels a day.
+		<div id="sec1"></div>
+		<div id="joool" class="jollon">
+		<p id="jooolnum" class="jollonum">
+		</p>
+		</div>
+		</div>
+	</div>
+</center>
+</body>
+<script>
+d = new Date();
+dajoolo = document.getElementById('joool');
+dajoolotxt = document.getElementById('jooolnum');
+dajooleight = 1000;
+timeSince = d.getTime();
+const timedivider = 10000000;
+timeSince -= 1514764800000;
+
+jellos = Math.ceil(timeSince/(timedivider*100));
+jelloonumberstring = "";
+
+jellowboxcontents = [];
+
+for(let i = 0; i < jellos; i++)
+{
+	jelloonumberstring += (jellos-i) + "<br>";
+	jellowboxcontents.push([]);
+}
+dajoolotxt.innerHTML = jelloonumberstring;
+
+leftoverjellowpixels = Math.floor(((Math.ceil(timeSince/(timedivider*100))-timeSince/(timedivider*100))*100));
+lastleftoverpixels = leftoverjellowpixels;
+
+
+
+{
+d = new Date();
+	timeSince = d.getTime();
+	timeSince -= 1514764800000;
+	dajoolo.style.height = ((timeSince)/timedivider) + "px"; 
+	
+	leftoverjellowpixels = (((Math.ceil(timeSince/(timedivider*100))-timeSince/(timedivider*100))*100));
+	dajoolotxt.style.transform = "translate(0px,-" + (leftoverjellowpixels+29) + "px)";
+	
+	lastleftoverpixels = leftoverjellowpixels;
+}
+
+setInterval(function()
+{ 
+	d = new Date();
+	timeSince = d.getTime();
+	timeSince -= 1514764800000;
+	dajoolo.style.height = ((timeSince)/timedivider) + "px"; 
+	
+	
+	leftoverjellowpixels = (((Math.ceil(timeSince/(timedivider*100))-timeSince/(timedivider*100))*100));
+	dajoolotxt.style.transform = "translate(0px,-" + (leftoverjellowpixels+29) + "px)";
+	
+	
+	if(leftoverjellowpixels > lastleftoverpixels)
+	{
+		jellos += 1;
+		jelloonumberstring = (jellos) + "<br>" + jelloonumberstring;
+		dajoolotxt.innerHTML = jelloonumberstring;
+	}
+	
+	lastleftoverpixels = leftoverjellowpixels;
+	
+}, 1000);
+
+function dateToPizelsFromBottom(dateyear, datemonth, dateday)
+{
+	yeardiff = dateyear-2018;
+	monthdiff = datemonth-1;
+	daydiff = dateday-1;
+	if(dateyear >= 2021)
+	{
+		daydiff += 1;
+	}
+	if(monthdiff >= 1) daydiff += 31;
+	if(monthdiff >=2)
+	{
+		daydiff += 28;
+		if(dateyear == 2020) daydiff += 1;
+	}
+	if(monthdiff >= 3) daydiff += 31;
+	if(monthdiff >= 4) daydiff += 30;
+	if(monthdiff >= 5) daydiff += 31;
+	if(monthdiff >= 6) daydiff += 30;
+	if(monthdiff >= 7) daydiff += 31;
+	if(monthdiff >= 8) daydiff += 31;
+	if(monthdiff >= 9) daydiff += 30;
+	if(monthdiff >= 10) daydiff += 31;
+	if(monthdiff >= 11) daydiff += 30;
+	milisecondssincetwentyeightteen = yeardiff*365*24*60*60*1000+daydiff*24*60*60*1000+12*60*60*1000;
+	pizelfrombottom = Math.round(milisecondssincetwentyeightteen/timedivider);
+	return pizelfrombottom;
+}
+
+function dateToPizelsFromTop(dateyear, datemonth, dateday)
+{
+	pizelfrombottom = dateToPizelsFromBottom(dateyear, datemonth, dateday);
+	d = new Date();
+	timeSince = d.getTime();
+	timeSince -= 1514764800000;
+	pizelfromtop = ((timeSince)/timedivider)-pizelfrombottom; 
+	return pizelfromtop;
+}
+
+function jelloToPizelsFromBottom(jellonum)
+{
+	pizelfrombottom = (jellonum * 100) -50;
+	return pizelfrombottom;
+}
+
+function jelloToPizelsFromTop(jellonum)
+{
+	pizelfrombottom = jelloToPizelsFromBottom(jellonum);
+	d = new Date();
+	timeSince = d.getTime();
+	timeSince -= 1514764800000;
+	pizelfromtop = ((timeSince)/timedivider)-pizelfrombottom; 
+	return pizelfromtop;
+}
+
+function placeEvent(eventtitle,eventlink,eventdescription,dateyear, datemonth, dateday)
+{
+	eventEl = document.createElement("DIV");
+	eventEl.innerHTML = "AAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	document.getElementById("sec1").appendChild(eventEl);  
+}
+
+function placeEventInJelloBox(dateyear, datemonth, dateday, evtype)
+{
+	jellowboxcontents[(Math.floor(dateToPizelsFromBottom(dateyear, datemonth, dateday)/100.0))].push([dateyear, datemonth, dateday, evtype]);
+}
+
+function placeJelloEventsp1()
+{
+	for(let i = 0; i<jellowboxcontents.length; i++)
+	{
+		if(jellowboxcontents[i].length > 0)
+		{
+			placeJelloEventsp2(i);
+		}
+	}
+}
+
+function secondLineExpanderRecursiveTimeoutFunction(pixelHeightAim, currentHeightScale, elementID)
+{
+	if(document.getElementById(elementID + "gte").innerHTML == "0") return;
+	if(pixelHeightAim <= currentHeightScale*4)
+	{
+		document.getElementById(elementID).style.transform = "scale(1,"+pixelHeightAim/4+") translate(0px,0px)";
+	}
+	else
+	{
+		document.getElementById(elementID).style.transform = "scale(1,"+currentHeightScale+") translate(0px,0px)";
+		setTimeout(function()
+		{
+			secondLineExpanderRecursiveTimeoutFunction(pixelHeightAim, currentHeightScale+7.5, elementID);
+		}, 17);
+	}
+}
+
+function thirdLineExpanderRecursiveTimeoutFunction(pixelWidthAim, currentWidthScale, elementID)
+{
+	if(document.getElementById(elementID.substring(0,elementID.length-1) + "gte").innerHTML == "0") return;
+	tlet = document.getElementById(elementID).style.transform;
+	if(pixelWidthAim <= currentWidthScale*4)
+	{
+		document.getElementById(elementID).style.transform = "scale("+(pixelWidthAim/4)+",1) " + tlet.substring(tlet.indexOf("translate"), tlet.length);
+	}
+	else
+	{
+		document.getElementById(elementID).style.transform = "scale("+currentWidthScale+",1) " + tlet.substring(tlet.indexOf("translate"), tlet.length);
+		setTimeout(function()
+		{
+			thirdLineExpanderRecursiveTimeoutFunction(pixelWidthAim, currentWidthScale+7.5, elementID);
+		}, 17);
+	}
+}
+
+
+function secondLineContracterRecursiveTimeoutFunction(currentHeightScale, elementID)
+{
+	if(document.getElementById(elementID + "gtc").innerHTML == "0") return;
+	if(0 >= currentHeightScale)
+	{
+		document.getElementById(elementID).style.transform = "scale(1,"+0+") translate(0px,0px)";
+	}
+	else
+	{
+		document.getElementById(elementID).style.transform = "scale(1,"+currentHeightScale+") translate(0px,0px)";
+		setTimeout(function()
+		{
+			secondLineContracterRecursiveTimeoutFunction(currentHeightScale-7.5, elementID);
+		}, 17);
+	}
+}
+
+function thirdLineContracterRecursiveTimeoutFunction(currentWidthScale, elementID)
+{
+	if(document.getElementById(elementID.substring(0,elementID.length-1) + "gtc").innerHTML == "0") return;
+	tlet = document.getElementById(elementID).style.transform;
+	if(0 >= currentWidthScale)
+	{
+		document.getElementById(elementID).style.transform = "scale("+0+",1) " + tlet.substring(tlet.indexOf("translate"), tlet.length);
+	}
+	else
+	{
+		document.getElementById(elementID).style.transform = "scale("+currentWidthScale+",1) " + tlet.substring(tlet.indexOf("translate"), tlet.length);
+		setTimeout(function()
+		{
+			thirdLineContracterRecursiveTimeoutFunction(currentWidthScale-7.5, elementID);
+		}, 17);
+	}
+}
+
+function createEventIcon(iconType,eventNum,totalEventsInTree)
+{
+	
+}
+
+function placeJelloEventsp2(jelloIndex)
+{
+	uniqueID = jelloIndex + "jello";
+	jelloEventCount = jellowboxcontents[jelloIndex].length;
+	
+	eventEl = document.createElement("DIV");
+	eventEl.style.position = "absolute";
+	pizelfromdatop = jelloToPizelsFromTop(jelloIndex+1);
+	eventEl.style.margin = (pizelfromdatop-18+3) + "px 0px 0px 100px";
+	eventEl.style.transform = "translate(-6px,0)";
+	eventEl.style.color = "red";
+	lineonebox = document.createElement("DIV");
+	lineonebox.style.position = "absolute";
+	
+	lineonebox.style.borderStyle = "solid";
+	lineonebox.style.borderBottomWidth = "0px";
+	lineonebox.style.borderLeftWidth = "0px";
+	lineonebox.style.borderTopWidth = "3px";
+	lineonebox.style.borderRightWidth = "3px";
+	lineonebox.style.borderColor = "transparent";
+	lineonebox.style.color = "transparent";
+	lineonebox.style.borderBottomLeftRadius = "0px";
+	lineonebox.style.borderBottomRightRadius = "0px";
+	lineonebox.style.borderTopLeftRadius = "0px";
+	lineonebox.style.borderTopRightRadius = "8px";
+	lineonebox.id = "l1b";
+	
+	lineonebox.style.width = "240px";
+	
+	lineonebox.style.transform = "scale(1,1) translate(12px,0px)";
+	
+	lineonebox.style.borderColor = "red";
+	lineonebox.style.color = "black";
+	l1bcon = document.createElement("DIV");
+	l1bcon.appendChild(lineonebox);
+	l1bcon.id = "l1bcon";
+	l1bcon.style.position = "absolute";
+	l1bcon.style.transform = "translate(0px, "+(-15)+"px)";
+	
+	
+	
+	evdi = document.createElement("DIV");
+
+	evdi.style.backgroundImage = "url('diamondUnselected.png')";
+	evdi.style.position = "absolute";
+	evdi.style.width = "36px";
+	evdi.style.height = "36px";
+	evdi.style.transform = "scale(1,1)";
+	evdi.style.animationDuration = ".05s";
+	evdi.style.animationIterationCount = "1";
+	evdi.style.animationName = "evdiastay";
+	
+	evdicon = document.createElement("DIV");
+	evdicon.style.position = "absolute";
+	evdicon.style.width = "36px";
+	evdicon.style.height = "36px";
+	evdicon.style.transform = "translate(240px,-32px)";
+	evdicon.appendChild(evdi);
+	
+	evdinum = document.createElement("DIV");
+	evdinum.style.width = "36px";
+	evdinum.style.height = "36px";
+	evdinum.style.transform = "translate(-1px,0px)";
+	evdinum.innerHTML = "1337";
+	evdi.style.fontFamily = "'f25'";
+	evdi.style.fontSize = "16px";
+	evdi.style.color = "#007817";
+	evdi.style.textShadow = "0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black";
+	evdinum.style.textAlign = "center";
+	evdinum.style.lineHeight = "36px";
+	evdi.appendChild(evdinum);
+	evdi.id = uniqueID + "evdi";
+	
+	verticalSeperationConstant = 60;
+	thirdExtenderWidth = 162;
+	
+	evdimousdetec = document.createElement("DIV");
+	evdimousdetec.style.position = "absolute";
+	evdimousdetec.style.width = "23px";
+	evdimousdetec.style.height = "23px";
+	evdimousdetec.style.transform = "translate(6px,-29px) rotate(45deg)";
+	evdimousdetec.style.cursor = "pointer";
+	evdimousdetec.onmouseenter = function()
+	{
+		document.getElementById(uniqueID + "evdi").style.animationName = "evdiagrow";
+		document.getElementById(uniqueID + "evdi").style.transform = "scale(1.1,1.1)";
+		
+	};
+	evdimousdetec.onmouseout = function()
+	{
+		document.getElementById(uniqueID + "evdi").style.animationName = "evdiastay";
+		document.getElementById(uniqueID + "evdi").style.transform = "scale(1,1)";
+	};
+	evdimousdetec.onclick = function()
+	{
+		bkionevdi = document.getElementById(uniqueID + "evdi").style.backgroundImage;
+		
+		if(bkionevdi.substring(5,bkionevdi.length-2) == 'diamondUnselected.png')
+		{
+			document.getElementById(uniqueID + "evdi").style.backgroundImage = "url('diamondSelected.png')";
+			document.getElementById(uniqueID + "evdi").style.textShadow = "0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white";
+			
+			document.getElementById(uniqueID + "fle").style.animationName = "firstLineExpanderExpand";
+			document.getElementById(uniqueID + "fle").style.transform = "scale(1,1) translate(41px,0px)";
+			
+			document.getElementById(uniqueID + "sle" + "gte").innerHTML = "1";
+			document.getElementById(uniqueID + "sle" + "gtc").innerHTML = "0";	
+			document.getElementById(uniqueID + "tle" + "gte").innerHTML = "1";
+			document.getElementById(uniqueID + "tle" + "gtc").innerHTML = "0";
+			
+			
+			setTimeout(function()
+			{
+				dgst = document.getElementById(uniqueID + "sle").style.transform;
+				
+				currentScale = parseFloat(dgst.substring(dgst.substring(dgst.indexOf("scale")+5, dgst.length).indexOf(",")+dgst.indexOf("scale")+7, dgst.substring(dgst.indexOf("scale")+5, dgst.length).indexOf(")")+dgst.indexOf("scale")+5));
+				secondLineExpanderRecursiveTimeoutFunction(verticalSeperationConstant*(jelloEventCount-1), currentScale, uniqueID + "sle");
+			}, 200);
+			setTimeout(function()
+			{
+				for(let i = 0; i<jelloEventCount; i++)
+				{
+					dgst = document.getElementById(uniqueID + "tle" + i).style.transform;
+					currentScale = parseFloat(dgst.substring(dgst.indexOf("scale")+6, dgst.substring(dgst.indexOf("scale")+5, dgst.length).indexOf(",")+dgst.indexOf("scale")+5));
+					thirdLineExpanderRecursiveTimeoutFunction(thirdExtenderWidth, currentScale, uniqueID + "tle" + i);
+				}
+			}, 200+((verticalSeperationConstant*(jelloEventCount-1)/30)*17));
+			setTimeout(function()
+			{
+				for(let i = 0; i<jelloEventCount; i++)
+				{
+					createEventIcon(jellowboxcontents[jelloIndex][i][3],i+1,jelloEventCount);
+				}
+			}, 200+((thirdExtenderWidth/30)*17)+((verticalSeperationConstant*(jelloEventCount-1)/30)*17);
+		}
+		else if(bkionevdi.substring(5,bkionevdi.length-2) == "diamondSelected.png")
+		{
+			document.getElementById(uniqueID + "evdi").style.backgroundImage = "url('diamondUnselected.png')";
+			document.getElementById(uniqueID + "evdi").style.textShadow = "0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black, 0px 0px 1px black";
+			
+			document.getElementById(uniqueID + "sle" + "gte").innerHTML = "0";
+			document.getElementById(uniqueID + "sle" + "gtc").innerHTML = "1";
+			document.getElementById(uniqueID + "tle" + "gte").innerHTML = "0";
+			document.getElementById(uniqueID + "tle" + "gtc").innerHTML = "1";
+			
+			
+			for(let i = 0; i<jelloEventCount; i++)
+			{
+				dgst = document.getElementById(uniqueID + "tle" + i).style.transform;
+				
+				currentScale = parseFloat(dgst.substring(dgst.indexOf("scale")+6, dgst.substring(dgst.indexOf("scale")+5, dgst.length).indexOf(",")+dgst.indexOf("scale")+5));
+				
+				thirdLineContracterRecursiveTimeoutFunction(currentScale, uniqueID + "tle" + i)
+			}
+			setTimeout(function()
+			{
+				dgst = document.getElementById(uniqueID + "sle").style.transform;
+				
+				currentScale = parseFloat(dgst.substring(dgst.substring(dgst.indexOf("scale")+5, dgst.length).indexOf(",")+dgst.indexOf("scale")+7, dgst.substring(dgst.indexOf("scale")+5, dgst.length).indexOf(")")+dgst.indexOf("scale")+5));
+				secondLineContracterRecursiveTimeoutFunction(currentScale, uniqueID + "sle");
+			}, (thirdExtenderWidth/30)*17);
+			setTimeout(function()
+			{
+				document.getElementById(uniqueID + "fle").style.animationName = "firstLineExpanderContract";
+				document.getElementById(uniqueID + "fle").style.transform = "scale(0,1) translate(41px,0px)";
+			}, ((thirdExtenderWidth/30)*17)+((verticalSeperationConstant*(jelloEventCount-1)/30)*17));
+		}
+	};
+	evdimousdetec.onmousedown = function()
+	{
+		document.getElementById(uniqueID + "evdi").style.animationName = "evdiapress";
+		document.getElementById(uniqueID + "evdi").style.animationDuration = "0s";
+		document.getElementById(uniqueID + "evdi").style.transform = "scale(.9,.9)";
+	};
+	evdimousdetec.onmouseup = function()
+	{
+		document.getElementById(uniqueID + "evdi").style.animationName = "evdiapresstounpress";
+		document.getElementById(uniqueID + "evdi").style.animationDuration = ".05s";
+		document.getElementById(uniqueID + "evdi").style.transform = "scale(1.1,1.1)";
+	};
+	evdi.appendChild(evdimousdetec);
+	
+	
+	firstLineExpanderCon = document.createElement("DIV");
+	firstLineExpander = document.createElement("DIV");
+	firstLineExpander.style.position = "absolute";
+	firstLineExpander.style.transform = "scale(0,1) translate(41px,0px)";
+	firstLineExpander.style.width = "82px";
+	firstLineExpander.style.height = "1px";
+	firstLineExpander.style.borderStyle = "solid";
+	firstLineExpander.style.borderBottomWidth = "0px";
+	firstLineExpander.style.borderLeftWidth = "0px";
+	firstLineExpander.style.borderTopWidth = "3px";
+	firstLineExpander.style.borderRightWidth = "0px";
+	firstLineExpander.style.borderColor = "blue";
+	firstLineExpander.style.color = "transparent";
+	
+	firstLineExpander.style.animationName = "firstLineExpanderNeutralContracted";
+	firstLineExpander.style.animationDuration = ".2s";
+	
+	firstLineExpander.id = uniqueID + "fle";
+	
+	firstLineExpanderCon.appendChild(firstLineExpander);
+	firstLineExpanderCon.style.position = "absolute";
+	firstLineExpanderCon.style.transform = "translate(217px,-15px)";
+	
+	secondLineExpanderCon = document.createElement("DIV");
+	secondLineExpander = document.createElement("DIV");
+	secondLineExpander.style.position = "absolute";
+	secondLineExpander.style.transform = "scale(1,0) translate(0px,0px)";
+	secondLineExpander.style.width = "3px";
+	secondLineExpander.style.height = "4px";
+	secondLineExpander.style.backgroundColor = "#00FF00";
+	secondLineExpander.style.color = "transparent";
+	secondLineExpander.style.animationDuration = ".2s";
+	secondLineExpander.style.animationDelay = ".03s";
+	secondLineExpander.id = uniqueID + "sle";
+	
+	secondLineExpanderGoingToExpand = document.createElement("DIV");
+	secondLineExpanderGoingToExpand.style.position = "absolute";
+	secondLineExpanderGoingToExpand.style.color = "transparent";
+	secondLineExpanderGoingToExpand.style.fontSize = "0px";
+	secondLineExpanderGoingToExpand.innerHTML = "0";
+	secondLineExpanderGoingToExpand.id = uniqueID + "sle" + "gte";
+	
+	secondLineExpanderGoingToContract = document.createElement("DIV");
+	secondLineExpanderGoingToContract.style.position = "absolute";
+	secondLineExpanderGoingToContract.style.color = "transparent";
+	secondLineExpanderGoingToContract.style.fontSize = "0px";
+	secondLineExpanderGoingToContract.innerHTML = "0";
+	secondLineExpanderGoingToContract.id = uniqueID + "sle" + "gtc";
+	
+	secondLineExpanderCon.appendChild(secondLineExpander);
+	secondLineExpanderCon.appendChild(secondLineExpanderGoingToContract);
+	secondLineExpanderCon.appendChild(secondLineExpanderGoingToExpand);
+	secondLineExpanderCon.style.position = "absolute";
+	secondLineExpanderCon.style.transform = "translate(337px,-14px)";
+	
+	thirdLineExpanderArray = [];
+	
+	thirdLineExpanderCon = document.createElement("DIV");
+	thirdLineExpanderCon.style.position = "absolute";
+	thirdLineExpanderCon.style.transform = "translate(335px,-14px)";
+	
+	for(let i = 0; i<jelloEventCount; i++)
+	{
+		
+		thirdLineExpander = document.createElement("DIV");
+		thirdLineExpander.style.position = "absolute";
+		thirdLineExpander.style.transform = "scale(0,1) translate(2px,"+(((jelloEventCount-1)*(verticalSeperationConstant/2))-i*verticalSeperationConstant)+"px)";
+		thirdLineExpander.style.width = "4px";
+		thirdLineExpander.style.height = "3px";
+		thirdLineExpander.style.backgroundColor = "orange";
+		thirdLineExpander.style.color = "transparent";
+		thirdLineExpander.style.animationDuration = ".2s";
+		thirdLineExpander.style.animationDelay = ".03s";
+		thirdLineExpander.id = uniqueID + "tle" + i;
+		
+		thirdLineExpanderCon.appendChild(thirdLineExpander);
+		
+		
+	}
+	
+	thirdLineExpanderGoingToContract = document.createElement("DIV");
+	thirdLineExpanderGoingToContract.style.position = "absolute";
+	thirdLineExpanderGoingToContract.style.color = "transparent";
+	thirdLineExpanderGoingToContract.style.fontSize = "0px";
+	thirdLineExpanderGoingToContract.innerHTML = "0";
+	thirdLineExpanderGoingToContract.id = uniqueID + "tle" + "gtc";
+	
+	thirdLineExpanderGoingToExpand = document.createElement("DIV");
+	thirdLineExpanderGoingToExpand.style.position = "absolute";
+	thirdLineExpanderGoingToExpand.style.color = "transparent";
+	thirdLineExpanderGoingToExpand.style.fontSize = "0px";
+	thirdLineExpanderGoingToExpand.innerHTML = "0";
+	thirdLineExpanderGoingToExpand.id = uniqueID + "tle" + "gte";
+	
+	thirdLineExpanderCon.appendChild(thirdLineExpanderGoingToContract);
+	thirdLineExpanderCon.appendChild(thirdLineExpanderGoingToExpand);
+	
+	eventEl.innerHTML = "◂";
+	eventEl.style.userSelect = "none";
+	
+	picto = document.createElement("DIV");
+	picto.style.position = "absolute";
+	picto.style.width = "50px";
+	picto.style.height = "43px";
+	picto.style.transform = "translate(501px,"+(-36 + verticalSeperationConstant - 120)+"px)"
+	picto.style.backgroundImage = "url('raven.png')";
+	picto.style.filter = "drop-shadow(0px 0px 1.5px rgba(0,0,0,0.55))";
+	
+	
+	picto2 = document.createElement("DIV");
+	picto2Con = document.createElement("DIV");
+	
+	picto2Con.style.position = "absolute";
+	picto2Con.style.width = "50px";
+	picto2Con.style.height = "50px";
+	picto2Con.style.transform = "translate(503px,"+(-36 + verticalSeperationConstant - 60)+"px)";
+	
+	picto2.style.position = "absolute";
+	picto2.style.width = "50px";
+	picto2.style.height = "50px";
+	picto2.style.transform = "scale(1,1)";
+	picto2.style.backgroundImage = "url('regulardie_transparent_fit.png')";
+	picto2.style.filter = "drop-shadow(0px 0px 3px rgba(0,0,0,0.55))";
+	picto2.id = uniqueID + "picto2";
+	
+	picto2Con.appendChild(picto2);
+	picto2Con.style.cursor = "pointer";
+	picto2Con.onmouseover = function()
+	{
+		document.getElementById(uniqueID + "picto2").style.transform = "scale(1.05,1.05)";
+	}
+	picto2Con.onmouseout = function()
+	{
+		document.getElementById(uniqueID + "picto2").style.transform = "scale(1,1)";
+	}
+	picto2Con.onmousedown = function()
+	{
+		document.getElementById(uniqueID + "picto2").style.transform = "scale(.9,.9)";
+	}
+	picto2Con.onmouseup = function()
+	{
+		document.getElementById(uniqueID + "picto2").style.transform = "scale(1,1)";
+	}
+	
+	picto3 = document.createElement("DIV");
+	picto3.style.position = "absolute";
+	picto3.style.width = "40px";
+	picto3.style.height = "50px";
+	picto3.style.transform = "translate(510px,"+(-36 + verticalSeperationConstant )+"px)";
+	picto3.style.backgroundImage = "url('segg!.png')";
+	picto3.style.filter = "drop-shadow(0px 0px 1.5px rgba(0,0,0,0.55))";
+	
+	descriptonZoneCon = document.createElement("DIV");
+	descriptonZoneCon.style.transform = "translate(585px,-120px)";
+	
+	descriptonZone = document.createElement("DIV");
+	descriptonZone.style.position = "absolute";
+	descriptonZone.style.width = "200px";
+	descriptonZone.style.height = "250px";
+	descriptonZone.style.borderStyle = "ridge";
+	descriptonZone.style.borderWidth = "3px";
+	descriptonZone.style.borderColor = "orange";
+	descriptonZone.style.padding = "10px";
+	descriptonZone.style.fontFamily = '"EPSONRegular2", "Courier", monospace';
+	
+	descriptonZone.style.overflowX = "hidden";
+	descriptonZone.style.userSelect = "text";
+	
+	descriptonZoneTitle = document.createElement("DIV");
+	descriptonZoneTitle.style.fontSize = "20px";
+	descriptonZoneTitle.style.textDecoration = "underline";
+	descriptonZoneTitle.style.position = "relative";
+	descriptonZoneTitle.style.color = "#E2CD1B";
+	descriptonZoneTitle.innerHTML = "Abranka.";
+	
+	descriptonZoneDesc = document.createElement("DIV");
+	descriptonZoneDesc.style.borderStyle = "solid";
+	descriptonZoneDesc.style.borderTopWidth = "1px";
+	descriptonZoneDesc.style.borderRightWidth = "0px";
+	descriptonZoneDesc.style.borderLeftWidth = "0px";
+	descriptonZoneDesc.style.borderBottomWidth = "1px";
+	descriptonZoneDesc.style.borderColor = "transparent";
+	
+	descriptonZoneDesc.style.fontSize = "14px";
+	descriptonZoneDesc.style.lineHeight = "16px";
+	descriptonZoneDesc.style.color = "#BCB0A4";
+	descriptonZoneDesc.style.position = "absolute";
+	descriptonZoneDesc.style.height = "170px"
+	descriptonZoneDesc.style.overflowY = "scroll";
+	descriptonZoneDesc.style.paddingTop = "8px";
+	descriptonZoneDesc.style.paddingRight = "3px";
+	descriptonZoneDesc.innerHTML = "This is a random thing that I made for reasons that are completely obvious to any perceptive observer. This is a random thing that I made for reasons that are completely obvious to any perceptive observer. This is a random thing that I made for reasons that are completely obvious to any perceptive observer. This is a random thing that I made for reasons that are completely obvious to any perceptive observer. This is a random thing that I made for reasons that are completely obvious to any perceptive observer. This is a random thing that I made for reasons that are completely obvious to any perceptive observer. ";
+	descriptonZoneDesc.id = "eventDesc";
+	
+	descriptonZoneGo = document.createElement("DIV");
+	descriptonZoneGo.style.position = "absolute";
+	descriptonZoneGo.style.transform = "translate(0px,180px)";
+	descriptonZoneGo.style.backgroundImage = "url('goreen.png')";
+	descriptonZoneGo.style.marginLeft = "146px";
+	descriptonZoneGo.style.width = "67px";
+	descriptonZoneGo.style.height = "50px";
+	descriptonZoneGo.style.cursor = "pointer";
+	descriptonZoneGo.onmousedown = function()
+	{
+		descriptonZoneGo.style.backgroundImage = "url('gorange.png')";
+	}
+	descriptonZoneGo.onmouseout = function()
+	{
+		descriptonZoneGo.style.backgroundImage = "url('goreen.png')";
+	}
+	descriptonZoneGo.onmouseup = function()
+	{
+		descriptonZoneGo.style.backgroundImage = "url('goreen.png')";
+	}
+	
+
+	descriptonZone.appendChild(descriptonZoneTitle);
+	descriptonZone.appendChild(descriptonZoneDesc);
+	descriptonZone.appendChild(descriptonZoneGo);
+	
+	
+	descriptonZone.style.backgroundColor = "#00000044";
+	descriptonZoneCon.appendChild(descriptonZone);
+	
+	eventEl.appendChild(l1bcon); 
+	eventEl.appendChild(firstLineExpanderCon); 
+	eventEl.appendChild(secondLineExpanderCon); 
+	eventEl.appendChild(thirdLineExpanderCon); 
+	eventEl.appendChild(evdicon); 
+	eventEl.appendChild(picto); 
+	eventEl.appendChild(picto2Con); 
+	eventEl.appendChild(descriptonZoneCon); 
+	eventEl.appendChild(picto3);
+	
+	eventEl.id = "evel";
+	document.getElementById("sec1").appendChild(eventEl);  
+	
+	
+	
+	
+	
+	
+}
+
+function addAllEventsToJelloBoxes()
+{
+	placeEventInJelloBox(2021,10,4,"story");
+	placeEventInJelloBox(2021,9,30,"random");
+	placeEventInJelloBox(2021,9,30,"expl");
+}
+
+addAllEventsToJelloBoxes();
+placeJelloEventsp1();
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="icon" href="card.png" type="image/png" >
+
+	<title>A aweseom Website</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+	@font-face 
+	{
+		font-family: 'Gaegu-Regular';
+		src: url(Gaegu-Regular.woff);
+		font-family: "Gaegu-Regular", "Courier", monospace;
+	}
+	
+	@font-face {
+		font-family:"courier-std";
+		src:url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/l?subset_id=2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/d?subset_id=2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/a?subset_id=2&fvd=n4&v=3") format("opentype");
+		font-display:auto;
+		font-style:normal;
+		font-weight:400;
+	}
+	
+	@font-face 
+	{
+		font-family: 'f25';
+		src: url(../FSEX300.ttf);
+		font-family: "fsex300", "Courier", monospace;
+	}
+	
+	@font-face 
+	{
+		font-family: 'EPSONRegular';
+		src: url(EPSONRegular.woff);
+		font-family: "EPSONRegular", "Courier", monospace;
+	}
+	
+	body 
+	{
+		background-color:#000000;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+        color: #FFFFFF;
+        font-family: "f25", "Courier", monospace;
+        margin:0;
+		padding:0;
+		height:100%;
+    }
+	.bg2
+	{
+		width:100%;
+		min-height:calc(300vh);
+		position:fixed;
+		top:0;
+		left:0;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		background-color: #7F7F7F;
+		
+		background-position: center center;
+		transform:scale(2.8,2.8);
+		will-change:;
+		z-index:-1;
+	}
+	@keyframes backgroundScroll 
+	{
+        0% {transform: translate(-400px,-500px);}
+        100% {transform: translate(0px,0px);}
+    }
+	@keyframes cool 
+	{
+        0% {transform: translate(-400px,-500px); }
+        50% {transform: translate(0px,0px); }
+		100% {transform: translate(-400px,-500px); }
+    }
+	.main 
+	{
+		margin:32px;
+        width: 756px;
+        font-size: 32px;
+        line-height: 80%;
+    }
+	body
+	{
+	}
+	.hardshadow
+	{
+		box-shadow: 10px 10px grey;
+	}
+	.nameBack
+	{
+		background-color: grey;
+		border: 5px solid black;
+	}
+	.mainTable
+	{
+		border: 5px solid #F2F2F2;
+		background-color: black;
+	}
+	.textTable
+	{
+		border: 5px solid transparent;
+        box-shadow: 0px 0px 20px 5px transparent;
+		background-color: transparent;
+		
+	}
+	.textTableTd
+	{
+		font-family: "f25", "Courier", monospace;
+		font-weight: 0;
+		border: 3px solid transparent;
+		background-image: none;
+		color: white;
+		font-size: 16px;
+		line-height: 100%;
+		padding: 0px;
+	}
+	td
+	{
+        border: 3px solid #F2F2F2;
+        padding: 8px;
+        text-align: justify;
+		height:50px;
+    }
+	td.left
+	{
+		width:200px;
+		height:50px;
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 8px;
+		color: white;
+        text-align: center;
+    }
+	td.right
+	{
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 0px;
+		color: white;
+        text-align: justify;
+    }
+	th
+	{
+		transform:translate(0px,-2px);
+		padding: 0px;
+		font-weight: 100;
+		text-align: center;
+		color: #B0E7F2;
+		transition: 0.5s;
+		text-align: left;
+	}
+	th:hover
+	{
+		animation: huecycle .17s forwards linear;
+		transition: 0.2s;
+	}
+	.imgbutton
+	{
+		border: 2px solid #696969;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		margin: 10px;
+		box-shadow: 0px 0px 10px 2px #000000;
+		transition: 0.5s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2
+	{
+		transition: 0.5s;
+	}
+	
+	.imgbutton:hover
+	{
+		border: 2px solid transparent;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		border-image: url('gfx_noisew.gif') 8 repeat;
+		transition: 20s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2:hover
+	{	
+		transition: 0.2s;
+		transform:scale(1.125);
+	}
+	
+	div.footerText
+	{
+		border-top: 4px dashed black;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+	}
+
+	div.title
+	{
+		font-size: 48px;
+		animation: shadowRotate .25s ease-in-out infinite;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		
+		color: white;
+		line-height: 90%;
+		text-shadow: 
+	}
+	div.titleword
+	{
+		font-size: 80px;
+		
+		
+		text-align: center;
+		
+		color: white;
+		line-height: 90%;
+	}
+	div.subtitle
+	{
+		font-size: 16px;
+		margin: 17px;
+		
+		text-align: center;
+		
+		color: white;
+		line-height: 90%;
+	}
+	@keyframes shadowRotate 
+	{
+        0% {text-shadow: 2px 2px 4px #000000, 0 0 25px #ffa32b;}
+            
+      
+        50% {text-shadow: 2px 2px 4px #000000, 0 0 15px #ffa32b;}
+            
+        100% {text-shadow: 2px 2px 4px #000000, 0 0 25px #ffa32b;}
+    }
+	@keyframes huecycle {
+        0% {filter: hue-rotate(0deg) saturate(200%);}
+            
+      
+        100% {filter: hue-rotate(45deg) saturate(200%);}
+            
+        
+    }
+	div.sectionl
+	{
+		position:relative;
+		z-index:2;
+		width:900px;
+		font-family: 'EPSONRegular';
+		margin: 40px;
+		padding: 20px;
+		text-align: left;
+		background-color: #565656;
+		color: black;
+		line-height: 90%;
+		transform:translate(-133px,0px)
+	}
+	div.section2
+	{
+		position:relative;
+		z-index:3;
+		width:700px;
+		
+		margin: 0px;
+		padding: 20px;
+		text-align: left;
+		background-color: #C4C4C4;
+		color: black;
+		line-height: 90%;
+		transform:translate(81px,-10px)
+	}
+	div.section3
+	{
+		
+	}
+	a
+	{
+		color: #564CF5;
+	}
+	div.jollon
+	{
+		overflow: hidden;
+		width: 100px;
+		height: 1000px;
+		background-image: url("oooooooooooooooooooooooooooos.png");
+		background-position: bottom;
+	}
+	p.jollonum
+	{
+		font-family: 'EPSONRegular';
+		width: 100px;
+		color: #00FF00;
+		transform: translate(0px,-50px);
+		line-height: 100px;
+		text-align: center;
+		text-shadow: 0px 0px 5px black,0px 0px 5px black,0px 0px 5px black,0px 0px 5px black,0px 0px 5px black,0px 0px 5px black;
+	}
+	
+	#gobutt
+	{
+		background-image: url('goreen.png');
+	}
+	
+	#gobutt:hover
+	{
+		background-image: url('gorange.png');
+	}
+	</style>
+</head>
+<body>
+<div class="bg2"></div>
+<center>
+	<div class="main">
+		<div class="title">
+		Welcome to the
+		<div class="titleword">
+		LEXICHRONICLUSTER.
+		</div>
+		<div class="subtitle">
+		(Aka a chronic cluster of lexical things.)
+		</div>
+		</div>
+		<div class="sectionl">
+		8.46 pixels a day.
+		<div id="sec1"></div>
+		<div id="joool" class="jollon">
+		<p id="jooolnum" class="jollonum">
+		</p>
+		</div>
+		</div>
+	</div>
+</center>
+</body>
+<script>
+d = new Date();
+dajoolo = document.getElementById('joool');
+dajoolotxt = document.getElementById('jooolnum');
+dajooleight = 1000;
+timeSince = d.getTime();
+const timedivider = 10000000;
+timeSince -= 1514764800000;
+
+jellos = Math.ceil(timeSince/(timedivider*100));
+jelloonumberstring = "";
+for(let i = 0; i < jellos; i++)
+{
+	jelloonumberstring += (jellos-i) + "<br>";
+}
+dajoolotxt.innerHTML = jelloonumberstring;
+
+leftoverjellowpixels = Math.floor(((Math.ceil(timeSince/(timedivider*100))-timeSince/(timedivider*100))*100));
+lastleftoverpixels = leftoverjellowpixels;
+
+{
+d = new Date();
+	timeSince = d.getTime();
+	timeSince -= 1514764800000;
+	dajoolo.style.height = ((timeSince)/timedivider) + "px"; 
+	
+	leftoverjellowpixels = (((Math.ceil(timeSince/(timedivider*100))-timeSince/(timedivider*100))*100));
+	dajoolotxt.style.transform = "translate(0px,-" + (leftoverjellowpixels+25) + "px)";
+	
+	lastleftoverpixels = leftoverjellowpixels;
+}
+
+setInterval(function()
+{ 
+	d = new Date();
+	timeSince = d.getTime();
+	timeSince -= 1514764800000;
+	dajoolo.style.height = ((timeSince)/timedivider) + "px"; 
+	
+	
+	leftoverjellowpixels = (((Math.ceil(timeSince/(timedivider*100))-timeSince/(timedivider*100))*100));
+	dajoolotxt.style.transform = "translate(0px,-" + (leftoverjellowpixels+25) + "px)";
+	
+	
+	if(leftoverjellowpixels > lastleftoverpixels)
+	{
+		jellos += 1;
+		jelloonumberstring = (jellos) + "<br>" + jelloonumberstring;
+		dajoolotxt.innerHTML = jelloonumberstring;
+	}
+	
+	lastleftoverpixels = leftoverjellowpixels;
+	
+}, 1000);
+
+function dateToPizelsFromBottom(dateyear, datemonth, dateday)
+{
+	yeardiff = dateyear-2018;
+	monthdiff = datemonth-1;
+	daydiff = dateday-1;
+	if(dateyear >= 2021)
+	{
+		daydiff += 1;
+	}
+	if(monthdiff >= 1) daydiff += 31;
+	if(monthdiff >=2)
+	{
+		daydiff += 28;
+		if(dateyear == 2020) daydiff += 1;
+	}
+	if(monthdiff >= 3) daydiff += 31;
+	if(monthdiff >= 4) daydiff += 30;
+	if(monthdiff >= 5) daydiff += 31;
+	if(monthdiff >= 6) daydiff += 30;
+	if(monthdiff >= 7) daydiff += 31;
+	if(monthdiff >= 8) daydiff += 31;
+	if(monthdiff >= 9) daydiff += 30;
+	if(monthdiff >= 10) daydiff += 31;
+	if(monthdiff >= 11) daydiff += 30;
+	milisecondssincetwentyeightteen = yeardiff*365*24*60*60*1000+daydiff*24*60*60*1000+12*60*60*1000;
+	pizelfrombottom = Math.round(milisecondssincetwentyeightteen/timedivider);
+	return pizelfrombottom;
+}
+
+function dateToPizelsFromTop(dateyear, datemonth, dateday)
+{
+	pizelfrombottom = dateToPizelsFromBottom(dateyear, datemonth, dateday);
+	d = new Date();
+	timeSince = d.getTime();
+	timeSince -= 1514764800000;
+	pizelfromtop = ((timeSince)/timedivider)-pizelfrombottom; 
+	return pizelfromtop;
+}
+
+function placeEvent(eventtitle,eventlink,eventdescription,dateyear, datemonth, dateday)
+{
+	eventEl = document.createElement("DIV");
+	eventEl.innerHTML = "AAAAAAAAAAAAAAAAAAAAAAAAAAA";
+	document.getElementById("sec1").appendChild(eventEl);  
+}
+
+function placeEvent(dateyear, datemonth, dateday)
+{
+	eventEl = document.createElement("DIV");
+	eventEl.style.position = "absolute";
+	pizelfromdatop = dateToPizelsFromTop(dateyear, datemonth, dateday);
+	eventEl.style.margin = (pizelfromdatop-18) + "px 0px 0px 100px";
+	eventEl.style.transform = "translate(-6px,0)";
+	eventEl.style.color = "red";
+	lineonebox = document.createElement("DIV");
+	lineonebox.style.position = "absolute";
+	
+	lineonebox.style.borderStyle = "solid";
+	lineonebox.style.borderBottomWidth = "0px";
+	lineonebox.style.borderLeftWidth = "0px";
+	lineonebox.style.borderTopWidth = "3px";
+	lineonebox.style.borderRightWidth = "3px";
+	lineonebox.style.borderColor = "transparent";
+	lineonebox.style.color = "transparent";
+	lineonebox.style.borderBottomLeftRadius = "0px";
+	lineonebox.style.borderBottomRightRadius = "0px";
+	lineonebox.style.borderTopLeftRadius = "0px";
+	lineonebox.style.borderTopRightRadius = "8px";
+	lineonebox.id = "l1b";
+	
+	lineonebox.style.width = "388px";
+	
+	
+	lineonebox.style.transform = "scale(1,-1) translate(12px,0px)";
+	
+	eventEl.appendChild(lineonebox); 
+	
+	linetwobox = lineonebox.cloneNode(true);
+	linetwobox.style.borderColor = "red";
+	linetwobox.style.color = "red";
+	linetwobox.style.height = "8px";
+	linetwobox.style.position = "absolute";
+	linetwobox.style.transform = "translate(400px,-8px)";
+	linetwobox.style.width = "25px";
+	linetwobox.style.borderTopWidth = "3px";
+	linetwobox.style.borderBottomWidth = "0px";
+	linetwobox.style.borderRightWidth = "0px";
+	linetwobox.style.borderLeftWidth = "3px";
+	linetwobox.style.borderTopLeftRadius = "8px";
+	linetwobox.style.borderTopRightRadius = "0px";
+	linetwobox.style.borderBottomLeftRadius = "0px";
+	linetwobox.style.borderBottomRightRadius = "0px";
+	
+	titleTxt = document.createElement("DIV");
+	titleTxt.style.display = "inline";
+	titleTxt.style.fontSize = "16px";
+	titleTxt.style.fontFamily = "'Iceland', cursive;";
+	titleTxt.style.color = "#FF6666";
+	titleTxt.style.textShadow = "2px 2px 0px #000000";
+	titleTxt.innerHTML="TITLE!!!!!";
+	titleTxt.id = "tite";
+	
+	titlecon = document.createElement("DIV");
+	titlecon.style.transform = "translate(30px,-20px)";
+	
+	titlecon.appendChild(titleTxt);
+	
+	
+	
+	l3b = document.createElement("DIV");
+	l3b.style.borderColor = "red";
+	l3b.style.borderStyle = "solid";
+	l3b.style.position = "relative";
+	l3b.style.transform = "translate(0px,0px)";
+	l3b.style.width = "100px";
+	l3b.style.height = "2px";
+	l3b.style.borderTopWidth = "0px";
+	l3b.style.borderBottomWidth = "3px";
+	l3b.style.borderRightWidth = "0px";
+	l3b.style.borderLeftWidth = "0px";
+	l3b.style.borderTopLeftRadius = "0px";
+	
+	descBox = document.createElement("DIV");
+	
+	descBox.style.width = "400px";
+	descBox.style.paddingTop = "25px";
+	descBox.style.transform = "scale(1,-1) translate(402px,-4px)";
+	descBox.style.fontSize = "16px";
+	descBox.style.fontFamily = "'Alice', serif";
+	descBox.style.lineHeight = "1.333";
+	descBox.style.marginTop = "10px";
+	descBox.style.marginLeft = "7px";
+	descBox.id = "db";
+	descBox.innerHTML="&nbsp;The little dog ran across the river into the depths of the unknown. What the dog would find would be up to the world to decide, and what and that was to be lived."
+	descBoxc = descBox.cloneNode(true);
+	descBoxc.style.position = "absolute";
+	descBoxc.style.userSelect = "none";
+	
+	 
+	lineonebox.appendChild(descBox); 
+	lineonebox.onload = 
+	
+	document.getElementById("sec1").appendChild(lineonebox);  
+	document.getElementById("sec1").appendChild(titlecon);  
+	setTimeout(function()
+	{
+	titlewidth = document.getElementById("tite").getBoundingClientRect().right-document.getElementById("tite").getBoundingClientRect().left;
+	l1bheight = document.getElementById("l1b").getBoundingClientRect().top-document.getElementById("l1b").getBoundingClientRect().bottom;
+	document.getElementById("l1b").remove();
+	
+	l3b.style.transform = "translate("+(titlewidth+4)+"px,-18px)";
+	l3b.style.width = 360-titlewidth-67+"px";
+	titlecon.appendChild(l3b);
+	
+	gobutton = document.createElement("DIV");
+	gobutton.id = "gobutt";
+	
+	gobutton.style.width = "67px";
+	gobutton.style.height = "50px";
+	
+	gobuttlinkcon = document.createElement("A");
+	gobuttlinkcon.href = "https://www.w3schools.com";
+	gobuttlinkcon.appendChild(gobutton);
+	
+	gobuttcon = document.createElement("DIV");
+	gobuttcon.style.transform = "translate("+(titlewidth+220)+"px,-45px)";
+	gobuttcon.appendChild(gobuttlinkcon);
+	
+	titlecon.appendChild(gobuttcon);
+	
+	
+	linetwobox.appendChild(titlecon);
+	
+	lineonebox.style.borderColor = "red";
+	lineonebox.style.color = "black";
+	l1bcon = document.createElement("DIV");
+	l1bcon.appendChild(lineonebox);
+	l1bcon.id = "l1bcon";
+	l1bcon.style.position = "absolute";
+	l1bcon.style.transform = "translate(0px, "+(l1bheight-12)+"px)";
+	l1bcon.appendChild(linetwobox); 
+	eventEl.innerHTML = "◂";
+	eventEl.appendChild(l1bcon); 
+	eventEl.id = "evel";
+	document.getElementById("sec1").appendChild(eventEl);  
+	
+	
+	
+	}, 100);
+	
+	
+}
+placeEvent(2021,10,4);
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+

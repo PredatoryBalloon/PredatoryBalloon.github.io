@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="icon" href="card.png" type="image/png" >
+<link rel="stylesheet" href="writingstyle.css"/>
+	<title>A aweseom Website</title>
+</head>
+<body>
+<div class="bg2"></div>
+<center>
+	<div class="main" id="main">
+	
+		<div class="title">
+		Welcome to a writing subpage.
+		<div class="titleword">
+		</div>
+		
+		<div class="subtitle">
+		</div>
+		
+		<div class="menupopupcon" id="mpuc">
+		</div>
+		
+		<div class="menubar">
+		</div>
+		
+		</div>
+		<div class="sectionl" id = "rsec1">
+		<div class="sectionlsclr" id = "rsec1sclr">
+		<div class="informationcon" id="infmtc">
+		<div class="information"  id="infmt">
+		</div>
+		</div>
+		<div id="sec1">
+		Enter Neeame.docx
+		</div>
+		<span id = "peterspan">
+There was once a hero. He was the hero of jack shit. He stood on a hill and fuckin yelled as loud as he could. No one heard him because he was in the desert. What a fuckin stupid idiot. Don’t go into the desert unless you want to die like a fuckin hobo eatin nothin but shit on the ground without santization. Anyways the guy died then and there, bein all an ass about it just falling down into the fuckin sand. He was not important at all for any reason and we hate him for everything. Just don’t go looking for him because hes dead and not actually interesting even from a horrible curiousity perspective. He was just dumb and franky kind of annoying I am glad hes gone. 
+		</span>
+		</div>
+		
+	</div>
+	</div>
+</center>
+</body>
+<script>
+
+infoBoxDate = "5/8/2021";
+infoBoxDesc = "Okay this one is pretty funny. I don't remember doing anything like this ever for any other reason. I probably was having a \"moment\". The title of the document still reeks of Homestuck though. I'm going to have to remember to not constantly make references to it in the future.";
+
+
+narrativeGraduator = false;
+
+
+
+
+
+
+
+
+draggingBottom = false;
+rsec1Height = document.getElementById("rsec1").getBoundingClientRect().top-document.getElementById("rsec1").getBoundingClientRect().bottom;
+if(infoBoxDesc == "")
+{
+	document.getElementById("infmt").remove();
+}
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+if(narrativeGraduator)
+{
+	document.getElementById("peterspan").style.fontSize = "22px";
+	document.getElementById("peterspan").style.lineHeight = "120%";
+	setTimeout(function()
+	{
+		//rsec1Height = document.getElementById("hkp").getBoundingClientRect().top-document.getElementById("hkp").getBoundingClientRect().bottom+500;
+	}
+	,100);
+	heightkeeper = document.getElementById("rsec1").cloneNode(true);
+	heightkeeper.id = "hkp";
+	heightkeeper.style.backgroundColor = "transparent";
+	heightkeeper.style.borderColor = "transparent";
+	heightkeeper.style.color = "transparent";
+	heightkeeper.style.userSelect = "none";
+	heightkeeper.style.zIndex = "-100";
+	heightkeeper.style.position = "absolute";
+	heightkeeper.style.transform = "translate(-133px,-163px)";
+	
+	lastmouseY = 0;
+	
+	//temptresc = document.getElementById("rsec1").cloneNode(true);
+	//document.getElementById("rsec1").remove();
+	document.getElementById("main").appendChild(heightkeeper);
+	//document.getElementById("main").appendChild(temptresc);
+	lasthkpheight = 0;
+	textremovalfunc = function()
+	{
+		if(!!!document.getElementById("hkp") || !!!document.getElementById("hkp").firstElementChild || document.getElementById("hkp").firstElementChild.childElementCount != 3)
+		{
+			setTimeout(textremovalfunc,30);
+			return;
+		}
+		hkpheight = document.getElementById("hkp").getBoundingClientRect().bottom-document.getElementById("hkp").getBoundingClientRect().top;
+		if(lasthkpheight != hkpheight)
+		{
+			lasthkpheight = hkpheight
+			setTimeout(textremovalfunc,200);
+			return;
+		}
+		rsec1Height=-hkpheight;
+		document.getElementById("hkp").style.height = (800) + "px";
+		document.getElementById("hkp").style.width = "800px";
+		document.getElementById("hkp").firstElementChild.remove();
+	}
+	setTimeout(textremovalfunc,30);
+	rsec1 = document.getElementById("rsec1");
+	rsec1.style.overflowY = "hidden";
+	rsec1.style.borderBottomColor = "black";
+	rsec1.style.borderBottomStyle = "solid";
+	rsec1.style.borderBottomWidth = "2px";
+	rsec1.style.height = 40 + "px";
+	draggerdownercon = document.createElement("DIV");
+	draggerdownercon.style.marginTop = "-40px";
+	draggerdownercon.style.width = "78px";
+	draggerdownercon.style.height = "20px";
+	draggerdownercon.style.cursor = "pointer";
+	draggerdownercon.id = "ddc";
+	draggerdownercon.style.backgroundImage = "url('dragdownertoucher.png')";
+	draggerdownercon.style.whiteSpace = "pre-wrap";
+	draggerdownercon.style.fontFamily = "Alice";
+	draggerdownercon.style.fontSize = "16px";
+	draggerdownercon.style.color = "black";
+	draggerdownercon.style.fontWeight = "bold";
+	draggerdownercon.innerHTML = "\n^^^^^^\nDrag this thing to see more!";
+	timeAtLastMouseMoveEvent = 0;
+	lastpixelsofscroll = 0;
+	changeinscroll = 0;
+	lastTimeButtonPressed = 0;
+	lastOffsetY= 0;
+	draggerdownercon.ontouchstart = function(event)
+	{
+		document.getElementById("ddc").innerHTML = "";
+		d = new Date();
+		timeRightNow= d.getTime();
+		draggingBottom = true;
+		rsec1.style.userSelect = "none";
+		timeAtLastMouseMoveEvent = 0;
+		changeinscroll = 0;
+	}
+	draggerdownercon.onmousedown = function(event)
+	{
+		document.getElementById("ddc").innerHTML = "";
+		d = new Date();
+		timeRightNow= d.getTime();
+		if(event.button == 0)
+		{
+			draggingBottom = true;
+			rsec1.style.userSelect = "none";
+			timeAtLastMouseMoveEvent = 0;
+			changeinscroll = 0;
+		}
+		if(event.button == 1 && !draggingBottom && timeRightNow > lastTimeButtonPressed + 500)
+		{
+			lastTimeButtonPressed= d.getTime();
+			draggingBottom = true;
+			rsec1.style.userSelect = "none";
+			timeAtLastMouseMoveEvent = 0;
+			changeinscroll = 0;
+		}
+		else if(event.button == 1 && draggingBottom  && timeRightNow > lastTimeButtonPressed + 500)
+		{
+			lastTimeButtonPressed= d.getTime();
+			draggingBottom = false;
+			rsec1.style.userSelect = "text";
+		}
+	}
+	document.onmouseup = function(event)
+	{
+		d = new Date();
+		timeRightNow= d.getTime();
+		if(event.button == 1 && draggingBottom  && timeRightNow > lastTimeButtonPressed + 500)
+		{
+			lastmouseY = event.pageY;
+			lastTimeButtonPressed= d.getTime();
+			draggingBottom = false;
+			rsec1.style.userSelect = "text";
+		}
+		if(event.button == 0)
+		{
+			d = new Date();
+			lastmouseY = event.pageY;
+			lastTimeButtonPressed= d.getTime();
+			draggingBottom = false;
+			rsec1.style.userSelect = "text";
+		}
+	}
+	document.ontouchend = function(event)
+	{
+		d = new Date();
+		timeRightNow= d.getTime();
+		lastmouseY = event.targetTouches[0].pageY;
+		lastTimeButtonPressed= d.getTime();
+		draggingBottom = false;
+		rsec1.style.userSelect = "text";
+		
+	}
+	document.onmousemove = function(event)
+	{
+		if(draggingBottom)
+		{
+			d = new Date();
+			timeAtLastMouseMoveEvent = d.getTime();
+			changeinscroll = 0;
+			yDiffMouseVDragger = 298.375-311;
+			lastmouseY = event.pageY;
+			yDiffMouseVHeight = lastmouseY-311;
+			if(-rsec1Height>-80+yDiffMouseVHeight)
+			{
+				document.getElementById("rsec1").style.height = (40+yDiffMouseVHeight) + "px";
+				draggerdownercon.style.backgroundImage = "url('dragdownertoucher.png')";
+			}
+			else
+			{
+				document.getElementById("rsec1").style.height = (rsec1Height) + "px";
+				draggerdownercon.style.backgroundImage = "url('dragdownertoucherend.png')";
+			}
+			
+		}
+	}
+	document.ontouchmove = function(event)
+	{
+		if(draggingBottom)
+		{
+			d = new Date();
+			timeAtLastMouseMoveEvent = d.getTime();
+			changeinscroll = 0;
+			yDiffMouseVDragger = 298.375-311;
+			lastmouseY = event.targetTouches[0].pageY;
+			yDiffMouseVHeight = lastmouseY-311;
+			if(-rsec1Height>-80+yDiffMouseVHeight)
+			{
+				document.getElementById("rsec1").style.height = (40+yDiffMouseVHeight) + "px";
+				draggerdownercon.style.backgroundImage = "url('dragdownertoucher.png')";
+			}
+			else
+			{
+				document.getElementById("rsec1").style.height = (rsec1Height) + "px";
+				draggerdownercon.style.backgroundImage = "url('dragdownertoucherend.png')";
+			}
+			
+		}
+	}
+	recursiveCheckIfScrollFunc = function()
+	{
+		d = new Date();
+		timeRightNow = d.getTime();
+		if(draggingBottom && (timeRightNow-timeAtLastMouseMoveEvent)>100)
+		{
+			yDiffMouseVDragger = 298.375-311;
+			yDiffMouseVHeight = lastmouseY+changeinscroll-311;
+			if(-rsec1Height>-80+yDiffMouseVHeight)
+			{
+				document.getElementById("rsec1").style.height = (40+yDiffMouseVHeight) + "px";
+				draggerdownercon.style.backgroundImage = "url('dragdownertoucher.png')";
+			}
+			else
+			{
+				document.getElementById("rsec1").style.height = (rsec1Height) + "px";
+				draggerdownercon.style.backgroundImage = "url('dragdownertoucherend.png')";
+			}
+			
+		}
+		setTimeout(recursiveCheckIfScrollFunc,30);
+	}
+	setTimeout(recursiveCheckIfScrollFunc,30);
+	document.onscroll = function(event)
+	{
+		
+		pixelsofscroll = document.documentElement.scrollTop;
+		changeinscroll += -lastpixelsofscroll + pixelsofscroll;
+		lastpixelsofscroll = pixelsofscroll;
+		
+	}
+	document.getElementById("main").appendChild(draggerdownercon);
+}
+
+
+
+document.getElementById("infmt").onmouseover = function()
+{
+	document.getElementById("infmt").style.opacity = "0.11";
+}
+document.getElementById("infmt").onmouseleave = function()
+{
+	document.getElementById("infmt").style.opacity = "0.5";
+}
+document.getElementById("infmt").onclick = function()
+{
+	if(!!document.getElementById("hpup"))
+	{
+		document.getElementById("hpup").remove();
+		return;
+	}
+	if(infoBoxDesc == "") return;
+	helppopupcon = document.createElement("DIV");
+	helppopupcon.style.position = "absolute";
+	helppopupcon.style.zIndex = "-1";
+	helppopborderWidth = 2;
+	helppopPadding = 3;
+	helppopupcon.style.width = (200-(helppopborderWidth*2)-(helppopPadding*2))+"px";
+	helppopupcon.style.height = (250-(helppopborderWidth*2)-(helppopPadding*2))+"px";
+	helppopupcon.style.borderWidth = helppopborderWidth+"px";
+	helppopupcon.style.borderColor = "grey";
+	helppopupcon.style.borderStyle = "solid";
+	helppopupcon.style.lineHeight = "100%";
+	helppopupcon.style.cursor = "initial";
+	helppopupcon.style.padding = helppopPadding+"px";
+	helppopupcon.style.backgroundColor = "#D8D8D8";
+	helppopupcon.style.color = "black";
+	helppopupcon.style.transform = "translate(-85px,86px)";
+	helppopuptitle = document.createElement("DIV");
+	helppopuptitle.style.marginTop = "6px";
+	helppopuptitle.style.width = (200-(helppopborderWidth*2)-(helppopPadding*2));
+	helppopuptitle.innerHTML = "Date made: " + infoBoxDate;
+	
+	helppopupdesc = document.createElement("DIV");
+	helppopupdesc.style.width = (200-(helppopborderWidth*2)-(helppopPadding*2));
+	helppopupdesc.style.height = 200+"px";
+	helppopupdesc.style.overflowY = "auto";
+	helppopupdesc.id = "hpud";
+	helppopupdesc.style.paddingTop = "10px";
+	helppopupdesc.style.paddingLeft = "3px";
+	helppopupdesc.style.paddingRight = "4px";
+	helppopupdesc.style.borderColor = "grey";
+	helppopupdesc.style.borderStyle = "solid";
+	helppopupdesc.style.borderTopWidth = "1px";
+	helppopupdesc.style.borderBottomWidth = "0px";
+	helppopupdesc.style.borderLeftWidth = "0px";
+	helppopupdesc.style.borderRightWidth = "0px";
+	helppopupdesc.innerHTML = infoBoxDesc;
+	
+	helppopupdesc.style.lineHeight = "100%";
+	helppopupcon.appendChild(helppopuptitle);
+	helppopupcon.appendChild(helppopupdesc);
+	helppopupcon.id = "hpup";
+	document.getElementById("infmtc").appendChild(helppopupcon);
+}
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
