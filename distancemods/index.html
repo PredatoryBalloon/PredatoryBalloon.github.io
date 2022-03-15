@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="icon" href="card.png" type="image/png" >
+
+	<title>A aweseom Website</title>
+	<style>
+	@font-face 
+	{
+		font-family: 'Gaegu-Regular';
+		src: url(Gaegu-Regular.woff);
+		font-family: "Gaegu-Regular", "Courier", monospace;
+	}
+	
+	@font-face {
+		font-family:"courier-std";
+		src:url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/l?subset_id=2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/d?subset_id=2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/a?subset_id=2&fvd=n4&v=3") format("opentype");
+		font-display:auto;
+		font-style:normal;
+		font-weight:400;
+	}
+	
+	@font-face 
+	{
+		font-family: 'f25';
+		src: url(../FSEX300.ttf);
+		font-family: "fsex300", "Courier", monospace;
+	}
+	
+	body 
+	{
+		background-color:#000000;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+        color: #FFFFFF;
+        font-family: "f25", "Courier", monospace;
+        margin:0;
+		padding:0;
+		height:100%;
+    }
+	.bg2
+	{
+		width:100%;
+		min-height:calc(300vh);
+		position:fixed;
+		top:0;
+		left:0;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		background-image: url("bg2.png");
+		
+		background-position: center center;
+		transform:scale(2.8,2.8);
+		will-change:;
+		z-index:-1;
+	}
+	@keyframes backgroundScroll 
+	{
+        0% {transform: translate(-400px,-500px);}
+        100% {transform: translate(0px,0px);}
+    }
+	@keyframes cool 
+	{
+        0% {transform: translate(-400px,-500px); }
+        50% {transform: translate(0px,0px); }
+		100% {transform: translate(-400px,-500px); }
+    }
+	.main 
+	{
+		margin:32px;
+        width: 756px;
+        font-size: 16px;
+        line-height: 80%;
+    }
+	body
+	{
+	}
+	.hardshadow
+	{
+		box-shadow: 10px 10px grey;
+	}
+	.nameBack
+	{
+		background-color: grey;
+		border: 5px solid black;
+	}
+	.mainTable
+	{
+		border: transparent;
+		background-color: transparent;
+		
+	}
+	.textTable
+	{
+		border: 5px solid transparent;
+        box-shadow: 0px 0px 20px 5px transparent;
+		background-color: transparent;
+		
+	}
+	.textTableTd
+	{
+		font-family: "f25", "Courier", monospace;
+		font-weight: 0;
+		border: 3px solid transparent;
+		background-image: none;
+		color: white;
+		font-size: 16px;
+		line-height: 100%;
+		padding: 0px;
+	}
+	td
+	{
+        border: 3px solid #F2F2F2;
+        padding: 8px;
+        text-align: justify;
+		height:50px;
+    }
+	td.left
+	{
+		width:200px;
+		height:50px;
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 8px;
+		color: white;
+        text-align: center;
+    }
+	td.right
+	{
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 0px;
+		color: white;
+        text-align: justify;
+    }
+	th
+	{
+		transform:translate(0px,-2px);
+		padding: 0px;
+		font-weight: 100;
+		text-align: center;
+		color: #B0E7F2;
+		transition: 0.5s;
+		text-align: left;
+	}
+	th:hover
+	{
+		animation: huecycle .17s forwards linear;
+		transition: 0.2s;
+	}
+	.imgbutton
+	{
+		border: 2px solid #696969;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		margin: 10px;
+		box-shadow: 0px 0px 10px 2px #000000;
+		transition: 0.5s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2
+	{
+		transition: 0.5s;
+	}
+	
+	.imgbutton:hover
+	{
+		border: 2px solid transparent;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		border-image: url('gfx_noisew.gif') 8 repeat;
+		transition: 20s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2:hover
+	{	
+		transition: 0.2s;
+		transform:scale(1.125);
+	}
+	
+	div.footerText
+	{
+		border-top: 4px dashed black;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+	}
+
+	div.title
+	{
+		font-size: 48px;
+		border: 4px double #F6FA4E;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		background-color: #000000;
+		color: white;
+		line-height: 90%;
+	}
+	@keyframes huecycle {
+        0% {filter: hue-rotate(0deg) saturate(200%);}
+            
+      
+        100% {filter: hue-rotate(45deg) saturate(200%);}
+            
+        
+    }
+	div.sectionl
+	{
+		position:relative;
+		z-index:2;
+		width:900px;
+		
+		margin: 40px;
+		padding: 20px;
+		text-align: left;
+		background-color: #565656;
+		color: black;
+		line-height: 90%;
+		transform:translate(-133px,0px)
+	}
+	div.section2
+	{
+		position:relative;
+		z-index:3;
+		width:700px;
+		
+		margin: 0px;
+		padding: 20px;
+		text-align: left;
+		background-color: #C4C4C4;
+		color: black;
+		line-height: 90%;
+		transform:translate(81px,-10px)
+	}
+	div.section3
+	{
+		
+	}
+	a
+	{
+		font-size: 16px;
+		color: #1A0DF2;
+	}
+	</style>
+</head>
+<body>
+<div class="bg2"></div>
+<center>
+	<div class="main">
+		<div class="title">
+		My Distance Mods
+		</div>
+		<div class="sectionl">
+		<div class="section2">
+		<div class="section3">
+		Here are my mods. Click the link to download.
+		<div>
+		<br>
+		<table class="mainTable">
+			- <a class="tooindex" href="../main.html">Mod</a><br>
+			- <a class="tooindex" href="../main.html">Mod</a><br>
+			- <a class="tooindex" href="../main.html">Mod</a><br>
+			- <a class="tooindex" href="../main.html">Mod</a><br>
+			- <a class="tooindex" href="../main.html">Mod</a><br>
+		</table><br>
+		</div>
+		<a class="tooindex" href="../main.html"><== Exit to Main Page</a>
+		</div>
+	</div>
+</center>
+</body>
+<script>
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
