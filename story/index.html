@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="icon" href="card.png" type="image/png" >
+
+	<title>A aweseom Website</title>
+	<style>
+	@font-face 
+	{
+		font-family: 'Gaegu-Regular';
+		src: url(Gaegu-Regular.woff);
+		font-family: "Gaegu-Regular", "Courier", monospace;
+	}
+	
+	@font-face {
+		font-family:"courier-std";
+		src:url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/l?subset_id=2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/d?subset_id=2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/8143dd/0000000000000000000131bb/27/a?subset_id=2&fvd=n4&v=3") format("opentype");
+		font-display:auto;
+		font-style:normal;
+		font-weight:400;
+	}
+	
+	@font-face 
+	{
+		font-family: 'f25';
+		src: url(../FSEX300.ttf);
+		font-family: "fsex300", "Courier", monospace;
+	}
+	
+	body 
+	{
+		background-color:#000000;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+        color: #FFFFFF;
+        font-family: "Verdana", "Courier", monospace;
+        margin:0;
+		padding:0;
+		height:100%;
+    }
+	.bg2
+	{
+		width:100%;
+		min-height:calc(300vh);
+		position:fixed;
+		top:0;
+		left:0;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		background-image: url("bg2.png");
+		
+		background-position: center center;
+		transform:scale(2.8,2.8);
+		will-change:;
+		z-index:-1;
+	}
+	@keyframes backgroundScroll 
+	{
+        0% {transform: translate(-400px,-500px);}
+        100% {transform: translate(0px,0px);}
+    }
+	@keyframes cool 
+	{
+        0% {transform: translate(-400px,-500px); }
+        50% {transform: translate(0px,0px); }
+		100% {transform: translate(-400px,-500px); }
+    }
+	.main 
+	{
+		margin:32px;
+        width: 756px;
+        font-size: 32px;
+        line-height: 80%;
+    }
+	body
+	{
+	}
+	.hardshadow
+	{
+		box-shadow: 10px 10px grey;
+	}
+	.nameBack
+	{
+		background-color: grey;
+		border: 5px solid black;
+	}
+	.mainTable
+	{
+		border: 5px solid #F2F2F2;
+		background-color: black;
+	}
+	.textTable
+	{
+		border: 5px solid transparent;
+        box-shadow: 0px 0px 20px 5px transparent;
+		background-color: transparent;
+		
+	}
+	.textTableTd
+	{
+		font-family: "f25", "Courier", monospace;
+		font-weight: 0;
+		border: 3px solid transparent;
+		background-image: none;
+		color: white;
+		font-size: 16px;
+		line-height: 100%;
+		padding: 0px;
+	}
+	td
+	{
+        border: 3px solid #F2F2F2;
+        padding: 8px;
+        text-align: justify;
+		height:50px;
+    }
+	td.left
+	{
+		width:200px;
+		height:50px;
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 8px;
+		color: white;
+        text-align: center;
+    }
+	td.right
+	{
+        background-image: url("sky.png");
+		font-size: 32px;
+        padding: 0px;
+		color: white;
+        text-align: justify;
+    }
+	th
+	{
+		transform:translate(0px,-2px);
+		padding: 0px;
+		font-weight: 100;
+		text-align: center;
+		color: #B0E7F2;
+		transition: 0.5s;
+		text-align: left;
+	}
+	th:hover
+	{
+		animation: huecycle .17s forwards linear;
+		transition: 0.2s;
+	}
+	.imgbutton
+	{
+		border: 2px solid #696969;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		margin: 10px;
+		box-shadow: 0px 0px 10px 2px #000000;
+		transition: 0.5s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2
+	{
+		transition: 0.5s;
+	}
+	
+	.imgbutton:hover
+	{
+		border: 2px solid transparent;
+		image-rendering: pixelated; 
+		image-rendering: optimize-contrast;
+		ms-interpolation-mode: nearest-neighbor;
+		border-image: url('gfx_noisew.gif') 8 repeat;
+		transition: 20s;
+		transition-timing-function: linear;
+	}
+	
+	.imgbutton2:hover
+	{	
+		transition: 0.2s;
+		transform:scale(1.125);
+	}
+	
+	div.footerText
+	{
+		border-top: 4px dashed black;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		color: black;
+		line-height: 90%;
+	}
+
+	div.title
+	{
+		font-size: 48px;
+		border: 4px double #F6FA4E;
+		margin: 25px;
+		padding: 20px;
+		text-align: center;
+		background-color: #000000;
+		color: white;
+		line-height: 90%;
+	}
+	@keyframes huecycle {
+        0% {filter: hue-rotate(0deg) saturate(200%);}
+            
+      
+        100% {filter: hue-rotate(45deg) saturate(200%);}
+            
+        
+    }
+	div.sectionl
+	{
+		position:relative;
+		z-index:2;
+		width:900px;
+		
+		margin: 40px;
+		padding: 20px;
+		text-align: left;
+		background-color: #565656;
+		color: black;
+		line-height: 90%;
+		transform:translate(-133px,0px)
+	}
+	div.section2
+	{
+		position:relative;
+		z-index:3;
+		width:700px;
+		
+		margin: 0px;
+		padding: 20px;
+		text-align: left;
+		background-color: #C4C4C4;
+		color: black;
+		line-height: 90%;
+		transform:translate(81px,-10px)
+	}
+	div.section3
+	{
+		font-size: 14px;
+		line-height: 130%;
+		font-weight: bold;
+	}
+	a
+	{
+		color: #564CF5;
+	}
+	</style>
+</head>
+<body>
+<div class="bg2"></div>
+<center>
+	<div class="main">
+		<div class="title">
+		The Story
+		</div>
+		<div class="sectionl">
+		<div class="section2">
+		<div class="section3">
+		Here's the story for why I am doing the things I am doing:<br><br>
+		Let's start with at the "beginning": Hard challenges.<br><br>
+		The first I can think of being significant was doing the Celeste Summit A Side golden after 5 consecutive days, 5 hours a day. Hardest thing I did at the time by far. 7-18-2018.<br><br>
+		The next hard thing I can think of being significant was making a word chart in 3 months, that diagrammed all the types of words in the English language and their usage, but I didn't work on it every day and not much time went into it every day. Finished around 4-14-2019.<br><br>
+		Then Mobra which took 15 hours over 3 days, but I couldn't play anything else due to the fact that the game doesn't save what checkpoint you are on when leaving the level and going back in, so if I left the level, I would have to start from the beginning and not at the checkpoint I was last at, so I had to keep my computer running the level for 3 days straight and couldn't play anything else out of fear it would break or crash the game somehow. This was a new hardest thing done mentally. Beaten 12-25-2019.<br><br>
+		Then Augur Brutal Mode, which took 5 days and 35 hours, avg 7hrs per day, and couldn't play anything else for the same reason as Mobra, since this level was in the same game. New hardest thing done mentally. 7-4-2020.<br><br>
+		Then I made a level every day for Distance (my most played game) for 61 days straight. This took a long time every day to do and was hard. I forgot how many hours a day this would take. I remember sometimes it would take 5+ hours and other times it would take about an hour or even less. I would have continued but me and my mental gave out before it reached a year, and reaching a year was the initial goal. The last level of this 61 days was, "dream soil", was released 11-15-2020. This was a new hardest thing done mentally, even if I had failed the initial goal.<br><br>
+		Then Augur Hyper Mode came out. It again was another Distance level meaning it followed the same rules as Mobra where I couldn't exit the level if I wanted to stay at the checkpoint I was at. It was released to me on 12-25-2020 and was way harder than any other level made in the game.<br><br>
+		I decided not to beat it because I thought it would take like 3 months, and I thought I would be able to do it so it wouldn't be interesting or worth it to do. If I know I can do a challenge, or at least feel like I know I can, I feel like there is less reason to do it for me, since if I know or feel like I know I can do it, it's not a challenge to me anymore; it's just me acting out what I know I can already do, and nothing is gained from a mental growth standpoint or mental fortitude test to confirm how much mental fortitude I have standpoint, or at least, that's how my brain perceives it. So instead, I decided to "skip to the endgame of challenges" and try what I thought would be the hardest possible challenge for me personally that I could think of, which I didn't know if I could do, which was learning how to draw. Not everybody struggles with it as much as I do, but for me, it isn't enjoyable to do, so learning it wouldn't be just doing a lot of it and having fun:  I would have to approach it like one of these challenges. The biggest difference is that this time it would take up to like, 8 years, instead of just a few months. I thought it would be best to just jump to the hardest thing, instead of ramping up to it or anything like that, so I decided not to do Augur Hyper Mode at the time it came out and instead just started trying to learn to draw.<br><br>
+		Me attempting to learn how to draw lasted 4 months before me and my mental couldn't continue on any longer. I got burnt out on it and even after taking a break from it and I could not get back into it. It "defeated" me, would be an apt way to put it.<br><br>
+		Then I started slowly going crazy (not as a result of failing to learn to draw; this just happened around this point in time), and because describing the exact "craziness" I had would be hard to convey, I think it would be best to provide examples of actions I did as a result of me going crazy: Intentionally throwing a ruler so hard at a wall that it broke, intentionally breaking the arms on my glasses, intentionally knocking over a cabinet and breaking it, intentionally getting a lightbulb and stomping on it as hard as possible (the result of which took forever to clean up), almost intentionally failing my world literature final even though I knew the answers and it felt as though I had "lost" in some way by not "winning" by not intentionally failing coming away from it, and intentionally almost skipping going to my physics class final.<br><br>
+		(The following paragraph contains context that probably isn't important for telling the main story here, but I'll leave it in anyways.). I did these things because I felt like I needed to prove I was in control: I had a strong "feeling" to not throw the ruler as hard as possible at the wall, so I felt like I needed to do it to prove that I could and prove that the "feeling" wasn't in control of my actions. I really liked my glasses, so breaking them was emotionally hard to stand, but I did it to prove I was in control of what decisions I made regardless. Same with knocking over the cabinet. I had tried to do well in world lit for a whole semester, so I felt like I needed to prove that I could also try to not do well, to make sure emotions weren't controlling my decisions. This is unimportant context for the purpose of explaining why I'm doing what I am now though.<br><br>
+		Eventually my brain "crashed". It's hard to explain how it felt like. It would be like trying to describe how it feels to be angry to someone who has never been angry before. But, if I were to do my best to describe it regardless, it felt like my brain "blue screened", "crashed", "broke", "collapsed in on itself", and other things like that.<br><br>
+		Doctors had no idea what happened pretty much, so I can't ascribe a specific scientific word to the event.<br><br>
+		When it happened, my parents sent me to a behavioral center, and I stayed there for a few days. It took about a year to recover to the point where I could do anything. This was the year before I started streaming every day, so 2022. (The first stream I did after this happened was 9-14-2023).<br><br>
+		I was basically unable to make decisions. My brain was confused to almost everything about "should I do this or should I not do this" which made me stuck and unable to do most things that involved any sort of decision making (even minor decision making) other than eat, sleep, go to the restroom, and watch TV in bed. I had trouble going up and down the stairs for example, because I couldn't decide if I "should or shouldn't", leaving me basically paralyzed in making decisions. I couldn't even brush my teeth for a long time as a result of the same decision making paralysis.<br><br>
+		Over the course of that year where I could barely do anything, and was bedridden for about a year, that was when I watched a lot of anime. So if you hear me talk about how I "watched some anime for a bit", this is when that occurred.<br><br>
+		Then, eventually I started to get better. I was still recovering in the year after I started streaming, but now I am much better. It was a slow healing process, but I eventually healed. Some stuff was lost seemingly forever, to the point where if I wanted it back I would have to re-invent it from scratch. One of the biggest ones I hated losing was my ability to do non-sequitur commentary. I lost that ability after the "brain crash", and basically had to build the habits to do it from the ground up, and it still isn't the same or even as good as it was before in my opinion.<br><br>
+		However, one thing that was lost that was very interesting was that everything I was burnt out on, I stopped being burnt out on: I lost the burnouts. For example, I was burnt out on making YTPMVs for years (if you don't know what YTPMVs are, just think of it as a type of artform for the purposes of the story here), and tried to get back into it for years with no avail, but once I was more recovered after the brain crash, I discovered I had no more burnout for it, and could work on making them without issue.<br><br>
+		Burnout for me results in me not being able to get back into the relevant task for years. Some people say they don't experience burnout, and while maybe that's true, burnout to me results from doing something I don't enjoy doing for a long period of time. If you play a game for 10,000 hours for example, you probably aren't going to get burnt out on it if you enjoy it the whole time. But this is besides the point I suppose for the purposes of this story.<br><br>
+		This burnout removal also applied to drawing. I had no more burnout on it. But this time, due to past experience, I was cautious. I knew if I were to jump in and try to do the exact same thing again, I would probably burn out again, and then not be able to learn drawing at all because I would be too burnt out to even keep trying. If I get burnt out on it, it's basically "game over" since I'm not about to do a full brain reset like I did again, and if it takes 5+ years to conquer burnout that comes from just attempting something for just 4 months, it is extremely unlikely I will make much progress in learning the skill at all.<br><br>
+		This is why I am going through a lot of hard games before attempting to draw. On one hand, if I am able to do it and make it to the stage where I actually can start drawing, I will have trained my brain on persistence, determination, patience, and eliminating factors that would stop a long-term plan, such as learning drawing, which in itself is a long-term endeavor.<br><br>
+		On the other hand, If I burn myself out on games, at least then I can learn from why and how I burnt myself out on it, and at least use that information to try something different in the future when I do attempt drawing, which increases the chances of success and lowers the chances of burning out or not being able to continue with it. This is basically using games as a sacrifice to learn how to avoid burnout if I fail (by burning out) to accomplish the hard stuff in these games, and that sacrifice (if it happens) will hopefully give me context as to how I can prevent burnout in the future in other endeavors, which is much better than sacrificing something like drawing itself for that same knowledge, which is one of the main goals (learning to draw that is).<br><br>
+		And also, to even further emphasize how I'm doing this in a way that I think makes sense, I would like to add that there is a rule I have where if I spend over 10,000 hours on one individual challenge, whether I have completed it or not by that time, I move on to learning how to draw. (This does not mean I can't spend more than 10,000 hours in one game; it means that I won't spend more than 10,000 hours on one individual challenge in one game.). If I can prove myself to be that determined and patient in a singular challenge in a game, I think it would be best to just jump straight to the endgame, since proving I can spend 10,000 hours in something is basically enough to make me think I can learn almost anything, since you can probably master almost anything in 10,000 hours.<br><br>
+		So that's why I am going through a bunch of hard games and hard challenges: To do what I can to increase the chances of success when it comes to attempting to learn a skill that takes an absurdly long time to learn. I'm taking it more carefully this time due to what I learned about failing to learn how to draw before and getting burnout which resulted in me not making much if any progress on it at all. By knowing of my previous failure, I am able to do things differently this time around to hopefully ensure a more desirable outcome, rather than attempting drawing, getting burnt out after a year, and then having to wait a full 7 years for the burnout to wear off before I can try learning it again.<br><br>
+		And at the end of the day, the goal of learning drawing isn't just to be able to put ideas from my head into a visible form in reality, but because drawing is one of the hardest possible things I could possibly learn. If I can learn to draw, I know that I will have the ability to learn and do almost anything, which is the ACTUAL goal. Sure there are other activities that you could probably do this with, where accomplishing those activities means proving that you can learn and do almost anything, but I chose drawing as the one to aim for because it is the one that I think both is basically as high as can be in difficulty for me personally and because if I do learn it, it will be useful, not as a job, but as a way to express myself better, kind of as like a side benefit.<br><br>
+		And the reason I find it so important to learn how be determined and/or patient enough to do anything I set my sights on is because I don't know the "meaning of life" and don't even have a very solid theory as to what that would be, so as I try to figure that out by spending time almost every day thinking about it and trying to put the pieces of the puzzle together, the best thing I think I can do is maximize my abilities, so that no matter what the "meaning of life" ends up being, I'll have the power to do what I ought to do, which is the ACTUAL ACTUAL goal of everything here.<br><br>
+		So now anyone who reads this knows the full story. How I got here, and why this is more important than just a game to me. You now know the actual reason behind what I'm doing, and why I am so determined when it doesn't seem like I should be. It's all part of this big plan that requires all of this context to understand.<br><br>
+		Now to FURTHER expand upon the story, I'll be transparent about one more thing: What is the "list" of games I want to play that I sometimes mention, and what determines this list? I've never explicitly said, but here it is now. <br><br>
+		My goal is to 100% all the challenge aspects and/or all the "content" of every game I own on Steam. Challenge is determined by what is recognized as an in-game acknowledged accomplishment, and "content" is basically, in general, any level, challenge, or gameplay that is meant to be played. However, this doesn't include grindy stuff, like die 1000 times or do 8 million jumps. I will sometimes make an exception for grindy stuff though if it's the very last "achievement" to get that I don't have.<br><br>
+		There are some games that I have on Steam that aren't on the list and probably never will be. These are those games: "Call of Duty: Black Ops III", "Call of Duty: World at War", "Ultimate Chicken Horse", "America's Army 3", "Arma 3", "Content Warning", "Counter-Strike 2", "Counter Strike: Source", "HAWKEN", "Hentai Girl Karen", "Robocraft", and "Team Fortress 2".<br><br>
+		There is also a list of 33 games that are in the "Maybe" category, where I am not sure if I want to go for them. I might play them, and I might not, this includes these games: "Assassin’s Creed® III", "Audiosurf 2", "Beat Hazard", "Besiege", "Clicker Heroes", "Contraption Maker", "Day of the Tentacle Remastered", "Dragon Age: Origins - Ultimate Edition", "The Elder Scrolls V: Skyrim", "The Elder Scrolls V: Skyrim Special Edition", "The Escapists", "Fairy Fencer F", "FEZ", "Five Nights at Freddy's", "Garry's Mod", "Grow Home", "Hyperdimension Neptunia Re;Birth1", "Kerbal Space Program", "MEGAJUMP", "Osmos", "Pinball FX2 VR", "Pixel Galaxy", "Princess Evangile", "Putt-Putt Saves the Zoo", "The Sandbox", "Scribblenauts Unlimited", "Space Engineers", "Starbound", "Starbound - Unstable", "Tales of the Deck", "Understand", "Unturned", and "Wobbly Jungle".<br><br>
+		If it is on CE (aka, if it's on this website here: https://cedb.me/) and I own it, then definitely it is on the list of games to play and 100% all officially acknowledged challenge and content in. ("Officially Acknowledged" can mean anything from a Steam achievement, to an in-game trophy, to an unlock, to a checkmark, to achieving a rank of 5 stars on every level when 5 stars is the max "rank", to even a slight change in the visuals of something upon completing a challenge.).<br><br>
+		If it is on CE as a puzzle game and I own it, I also intend to 100% all officially acknowledged challenge and content in it: "Manifold Garden", "Patrick's Parabox", and "Snakebird". This would include "Antichamber" and "Portal 2", but at the time of writing this (March 3, 2025), I've already completed those. "Outer Wilds" is an exception where it is under the "maybe" column. I may or may not do that one.<br><br>
+		Additionally, there are some Steam games that aren't on CE that I own on Steam I intend to finish regardless, even though they aren't on CE: "Copy Kitty", "The Elephant Collection", "Fly'N", "Hyphen", "IguaRPG", "Long Live The Queen", "Mosaic Maze", "Rayman Origins",  and "Recettear: An Item Shop's Tale". These may be finished on or off stream depending on their nature ("Long Live The Queen", for example, just wouldn't fit the sort of things I stream, but who knows I might stream it.).<br><br>
+		There's also one non-CE Steam game that is under the "Maybe Finish?" category due to its excessiveness in how much there is to do: "The Binding of Isaac: Rebirth" with all dlcs.<br><br>
+		If it is a game I had played before but never finished 100% (such as Super Mario Galaxy), I plan to go back to it and finish it almost always.<br><br>
+		Lastly, there are some random games not on Steam that are on the list, such as "Cat Planet" by Sylvie. I will manage these "random" ones as they come up I guess.<br><br>
+		I also am not allowing myself to buy anymore Steam games until all the ones I definitely set myself up to do are completed, so there will be no "added" challenges. There is a finite amount, which means if I don't break mentally during this adventure I've crafted, it will eventually end. If I allowed myself to buy any more games, that would change the nature of the journey I planned drastically. Also, there's no point in buying any more games if the plan is to finish all the ones I have first. After/If I finish all the ones that are completely on the list (aka, Steam games I currently own that are on CE), then I will allow myself to buy games.<br><br>
+		I also will allow myself to play games for their cultural significance like OFF or Yume Nikki, but now I will hesitate before doing so, because the faster I can get through the hard stuff the better. I still will consider them though, since they will have value to gain by playing them (the value is of understanding a culturally significant game and of understanding why it's significant), and they shouldn't take *too* long to beat, since these sort of games usually aren't that hard.<br><br>
+		The plan to 100% all challenges in all these games was formulated at the start because it was an arbitrary point I picked due to how others seemed to see the difficulty of doing such a thing. So while there were many arbitrary ways I could achieve the same effect that results from putting myself through an absurd challenge such as this one, this was the one I latched onto. I latched onto it I think because I liked the idea of learning about a bunch of different game challenges (and games in general) by doing them. Learning about games was a side benefit I liked the idea of, basically. Also, due to the nature of how this works, I can't be changing this goal either. It's set in stone.<br><br>
+		It is important for it to be set in stone, since part of what makes this journey significant to me is NOT knowing exactly what to expect. By setting the rules like this before I understand all the games I set out to do with this plan, I am putting myself through a journey I don't have complete control over, which is important. It is important because doing it this way allows for the unexpected to happen, and I can learn a lot from being forced through the unexpected. I like learning from being forced to surpass unexpected obstacles, but more importantly, I think being forced through them is necessary for achieving the long-term goal where I end up being able to have the persistence and patience to overcome pretty much anything, since I won't always have control over what mastering or doing certain things will entail.<br><br>
+		Also, for reference, a lot of the game related goals/challenges I've set I set because I thought they would be impossible for me to achieve due to me thinking I won't have the mental fortitude to stick with them long enough to achieve them, which seems like it wouldn't make sense (to set challenges that I don't think are possible for myself as goals, that is), but because currently I hold the view that learning something like drawing would be impossible for me from a mental standpoint (aka me not having the mental fortitude to stick with it long enough to get good at it), I kind of have to prove to myself I can do the "mentally impossible" to prove I'm ready to do something like learning drawing, which I also see as something that is currently "mentally impossible" for me, or at least, that's the way I saw it at the start of this journey.<br><br>
+		So there. I think I've been fully transparent about everything now. Up until now, I thought it would be best to not tell the full story and let the imagination of people watching try and piece it together from the pieces I offered, but now things have gotten deep enough to where I feel like it is best to be fully transparent about this sort of thing.<br><br>
+		Is this the best way to do this? To accomplish this huge goal overarching I have? I don't know. But this is what I am doing. I thought about it a lot before I started, and I still think it's a pretty decent way to accomplish what I want thankfully. Despite this, feel free to criticize this plan. I know you might not feel it's your place to do so, but I benefit a ton from honest outside perspective. I need it, even, since a lot of the time it offers information I am very very bad at getting on my own.<br><br>
+		Now as for how I'm keeping up with doing this, and my current strategy for being able to keep playing the games without mentally caving in, that is something I think I might share another time.<br><br>
+		<div>
+	</div>
+</center>
+</body>
+<script>
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
