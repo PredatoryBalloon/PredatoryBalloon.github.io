@@ -1932,6 +1932,8 @@ function iconTypeToIconIndex(iconType)
 
 function addAllEventsToJelloBoxes()
 {
+	//Categories: random, story, expl, vid, music, project, tool, info.
+	//"expl" means "explanation"
 	theEventArray = [];
 	theEventArray.push([2019,4,28,"random","PhysicsSillies0.txt","This is a list of random things.","writings/w1.html"]);
 	theEventArray.push([2019,7,23,"random","Adding.txt","This is a short document that I am not sure why I included here.","writings/w2.html"]);
@@ -1962,10 +1964,13 @@ function addAllEventsToJelloBoxes()
 	theEventArray.push([2021,12,3,"tool","Distance EditorAnnihilator","This is a mod for Distance that removes a bunch of limits on the in-game editor. A lot of its functions are obscure, and I can't imagine most of them being used because honestly, so few people level edit and even fewer are willing to use mods to do it. Such a group of worrywarts. A lot of them are cool though, but jeez. Talk about a reluctance to try new things. It's like those adult losers who never try anything new because it is all too scary, and their \"experience\" tells them that anything could go wrong at any time, ESPECIALLY when they aren't familiar with something. They think they are so smart, but then they never try anything new!! (My secret goal is to make an editor mod so awesome, that these sticks in the mud loosen up a bit and actually use it!).","medias/EditorAnnihilator.zip"]);
 	theEventArray.push([2021,12,5,"tool","Distance TrackAttach","This is a mod for Distance that allows you to attach tracks to tracks. I made it in like 4 hours, pretty basic stuff.","medias/TrackAttachToTrack.zip"]);
 	//theEventArray.push([2021,12,18,"tool","Distance MeshExporter","This is a mod for Distance that allows you export things in the game as 3d object files.","medias/MeshExporter.zip"]);
-	
+	theEventArray.push([2021,12,31,"music","Homieworld.mp3","I am writing this in 2025 in the middle of July so my memory of making this is hazy, since it has been so long. it is pretty good though I still think. Here it is now. (I should have put it here way earlier to be fair whoops.).","medias/Homieworld.mp3"]);
+	theEventArray.push([2022,1,3,"music","Intensive Care Unit Cover","I made this to try and get better at sound making. I think I did okay? I remember not being satisfied with the drums, and some effect that is applied to the lead around 0:57, but otherwise it is pretty alright. I remember getting the bongo sounds right was really hard since you can barely hear them in the original song.","medias/RIntensive Care Unit_FULL3.flac"]);
 	
 	theEventArray.push([2021,9,1,"vid","DMV Instructor WR","I played a game, and found a strat that other people weren't using to go faster. This meant that I obviously had to show everyone by beating everyone with a WR. What other way is there even to show someone a speed strat?","https://www.speedrun.com/roundabout/run/zgrrq2dm"]);
 
+	//New Stuff as of July 12, 2026.
+	theEventArray.push([2024,8,14,"info","QPSD","This the day I first started streaming QP Shooting: Dangerous, a game that would take me about 7 months to fully complete.",""]);
 	theEventArray.sort(function(a, b){if(a[0]-b[0] != 0){return a[0]-b[0];}else if(a[1]-b[1] != 0){	return a[1]-b[1];}return a[2]-b[2];});
 	
 	for(let i = 0; i<theEventArray.length; i++)
